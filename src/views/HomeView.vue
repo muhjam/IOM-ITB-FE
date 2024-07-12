@@ -29,7 +29,7 @@
         </a>
         <div class="p-5">
           <a href="#">
-            <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{ v.title }}</h5>
+            <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-white">{{ v.title }}</h5>
           </a>
           <p class="mb-3 font-normal text-white">{{ v.description }}</p>
           <a :href="v.url" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-main bg-white rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
