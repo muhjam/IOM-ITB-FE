@@ -36,9 +36,9 @@ module.exports = {
           dark: "#3267E3",
         },
         main: {
-          light: "#1297EC",
-          DEFAULT: "#1297EC",
-          dark: "#1297EC",
+          light: "#003793",
+          DEFAULT: "#003793",
+          dark: "#003793",
         },
         colorBlack: {
           light: "#313539",
@@ -49,6 +49,11 @@ module.exports = {
           light: "#4C4C4C",
           DEFAULT: "#4C4C4C",
           dark: "#4C4C4C",
+        },
+        colorSecond: {
+          light: "##F2F7FC",
+          DEFAULT: "##F2F7FC",
+          dark: "##F2F7FC",
         },
       },
     },

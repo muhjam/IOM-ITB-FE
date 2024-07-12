@@ -10,6 +10,8 @@
     "bootbox": "^6.0.0",
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
+    "flowbite": "^2.4.1",
+    "flowbite-vue": "^0.1.5",
     "jquery": "^3.7.1",
     "js-cookie": "^3.0.5",
     "process": "^0.11.10",

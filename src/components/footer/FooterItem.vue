@@ -1,78 +1,77 @@
 <template>
- <footer class="bg-[#F2F7FC] text-[#003A6E] pt-5">
-  <div class="container mx-auto px-4">
-    <div class="flex flex-wrap items gap-2">
-      <div class="w-full md:w-1/4 lg:w-1/4 xl:w-1/3 mt-3 pr-[3rem]">
-        <div class="flex w-full items-center">
-        <img :src="require('@/assets/image/logo.png')" alt="" class="w-[100px]">
-        <div class="w-full">
-            <p class="text-lg font-bold leading-tight">Ikatan Orang Tua Mahasiswa</p>
-            <p class="text-sm leading-tight">Institut Teknologi Bandung</p>
+  <footer class="bg-[#F2F7FC] text-[#003A6E] py-10">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 pr-10">
+          <div class="flex items-center mb-4">
+            <img :src="require('@/assets/image/logo.png')" alt="IOM-ITB" class="w-[100px] mr-4">
+            <div>
+              <p class="text-lg font-bold leading-tight">Ikatan Orang Tua Mahasiswa</p>
+              <p class="text-sm leading-tight">Institut Teknologi Bandung</p>
+            </div>
+          </div>
+          <p class="mb-4">
+            Gedung Kampus Center Barat Lantai 1<br>
+            Jl. Ganesa No. 10 Lebak Siliwangi Kec. Coblong Kota Bandung 40132
+          </p>
         </div>
-        </div>
-        <hr class="border-[#BED4EA] my-[16px]">
-        <p>
-        Gedung Campus Center Barat Lantai 1
-
-Jl. Ganesa No.10 Lebak Siliwangi
-
-Kec. Coblong, Kota Bandung 40132
-
-Phone: (022) 2504814
-        </p>
-      </div>
-      
-      <div class="flex flex-col gap-2 w-full md:w-1/4 lg:w-1/4 xl:w-1/3 mt-4 px-[16px]">
-        <h5 class="font-semibold capitalize">PROFILE</h5>
-        <p><a href="/" class="hover:underline">Visi dan Misi</a></p>
-        <p><a href="/#produk" class="hover:underline">Struktur Organisasi</a></p>
-        <p><a href="/?type=gitar" class="hover:underline">Kontak</a></p>
-      </div>
-      
-      <div class="flex flex-col gap-2 w-full md:w-1/4 lg:w-1/4 xl:w-1/4 mt-4">
-        <h5 class="font-semibold capitalize">KONTAK</h5>
-        <p><i class="fa fa-envelope mr-2"></i>iom.itb@gmail.com</p>
-        <p><i class="fa fa-phone mr-2"></i>+62 819-3145-5863</p>
-      </div>
-      
-      <div class="w-full md:w-1/4 lg:w-1/4 xl:w-1/4 mt-3">
-        <div class="text-center md:text-right">
-          <ul class="list-none p-0 m-0 flex justify-center md:justify-end space-x-4">
-            <li>
-              <a href="#" class="text-[#003A6E] text-xl"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-              <a href="#" class="text-[#003A6E] text-xl"><i class="fab fa-twitter"></i></a>
-            </li>
-            <li>
-              <a href="#" class="text-[#003A6E] text-xl"><i class="fab fa-google-plus"></i></a>
-            </li>
-            <li>
-              <a href="#" class="text-[#003A6E] text-xl"><i class="fab fa-linkedin-in"></i></a>
-            </li>
+        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
+          <h5 class="font-semibold mb-2">PROFIL</h5>
+          <ul>
+            <li><a href="#" class="hover:underline">Latar Belakang</a></li>
+            <li><a href="#" class="hover:underline">Struktur Kepengurusan</a></li>
+            <li><a href="#" class="hover:underline">Visi dan Misi</a></li>
           </ul>
         </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
+          <h5 class="font-semibold mb-2">KONTAK</h5>
+          <p>iom.itb@gmail.com</p>
+          <p>+62 819-3145-5863</p>
+          <div class="flex space-x-4 mt-2">
+            <a href="#" class="text-xl"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-xl"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-xl"><i class="fab fa-line"></i></a>
+            <a href="#" class="text-xl"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-xl"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
+          <h5 class="font-semibold mb-2">GABUNG BERSAMA KAMI</h5>
+          <p class="mb-2">Dengan mengisi formulir ini, Anda dapat mendaftar untuk menerima email kami dan dapat berhenti berlangganan kapan saja.</p>
+          <form>
+            <input type="email" placeholder="Email" class="w-full px-3 py-2 mb-2 border rounded">
+            <button type="submit" class="w-full px-3 py-2 bg-[#003A6E] text-white rounded">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
-    
-    <div class="text-center mt-4">
-      <p class="copyright">
-        Copyright ©2024 by Jamjam.
-      </p>
-    </div>
-  </div>
-</footer>
+  </footer>
 </template>
+
 
 <script>
 export default {
-  data() {
-    return {
-
-    };
-  },
-  methods: {
-
-  },
+  name: 'Footer',
 };
 </script>
+
+<style scoped>
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+</style>
+

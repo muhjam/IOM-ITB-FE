@@ -1,58 +1,109 @@
 <template>
- <nav class="fixed top-0 left-0 right-0 bg-[#003b6f] text-[#ffffff99] py-2 z-50">
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-lg px-4 py-3 z-50">
+  <transition name="slide">
+      <ul
+        v-if="isMenuOpen"
+        class="md:hidden fixed top-0 left-0 mr-10 z-10 w-[250px] sm:w-[400px] h-[100vh] bg-white shadow-lg"
+      >
+        <li class="py-2">
+          <a
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/' ? 'font-[800]' : 'font-[500]'}`"
+            href="/"
+          >Beranda</a>
+        </li>
+        <li class="mr-4">
+          <a
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/tentang' ? 'font-[800]' : 'font-[500]'}`"
+            href="/tentang"
+          >Tentang Kami</a>
+        </li>
+        <li class="py-2">
+          <a
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/kegiatan' ? 'font-[800]' : 'font-[500]'}`"
+            href="/kegiatan"
+          >Kegiatan</a>
+        </li>
+        <li class="py-2">
+          <a
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/daftar' ? 'font-[800]' : 'font-[500]'}`"
+            href="/daftar"
+          >Pendaftaran Anggota</a>
+        </li>
+        <li class="py-2">
+          <a
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/bantuan' ? 'font-[800]' : 'font-[500]'}`"
+            href="/bantuan"
+          >Pengajuan Bantuan</a>
+        </li>
+        <li class="py-2">
+          <a
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/donasi' ? 'font-[800]' : 'font-[500]'}`"
+            href="/donasi"
+          >Donasi</a>
+        </li>
+      </ul>
+    </transition>
   <div class="container mx-auto flex items-center justify-between">
-    <div class="flex items-center space-x-4">
-      <a href="#" class="text-sm hover:text-white">EN</a>
-      <a href="#" class="text-sm hover:text-white">ID</a>
-    </div>
-    <div class="flex items-center space-x-4">
-      <a href="#" class="text-sm hover:text-white">My ITB</a>
-      <a href="#" class="text-sm hover:text-white"><i class="fa fa-envelope"></i> Email</a>
-      <a href="#" class="text-sm hover:text-white"><i class="fa fa-search"></i> Search</a>
-    </div>
-  </div>
-</nav>
-
-<nav class="fixed top-[36px] left-0 right-0 bg-white shadow-lg px-4 py-3 z-50">
-  <div class="container mx-auto flex items-center justify-between">
-    <a class="text-[#003b6f] font-bold flex items-center" href="/">
-      <img :src="require('@/assets/image/logo.png')" alt="IOM ITB Logo" class="w-16 h-auto mr-3">
+    <a class="text-main font-[700] flex items-center" href="/">
+      <img :src="require('@/assets/image/logo.png')" alt="IOM ITB Logo" class="w-14 md:w-16 h-auto mr-3">
       <div>
-        <p class="text-lg font-bold leading-tight">Ikatan Orang Tua Mahasiswa</p>
-        <p class="text-sm leading-tight">Institut Teknologi Bandung</p>
+        <p class="text-[14px] md:text-[18px] font-[700] leading-tight">Ikatan Orang Tua Mahasiswa</p>
+        <p class="text-[14px] md:text-[16px] font-[600] leading-tight">Institut Teknologi Bandung</p>
       </div>
     </a>
-    <button class="text-[#003b6f] lg:hidden" id="navbarToggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="text-main lg:hidden" id="navbarToggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
     </button>
     <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="navbarNav">
-      <ul class="flex flex-col lg:flex-row lg:space-x-4 uppercase">
+      <ul class="flex flex-col lg:flex-row lg:space-x-4">
         <li class="nav-item">
-          <a class="text-[#003b6f] hover:opacity-80 px-3 py-2" aria-current="page" href="/">Home</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="text-[#003b6f] hover:opacity-80 px-3 py-2" aria-current="page" href="#">Tenrang Kami</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/tentang' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/tentang">Tenrang Kami</a>
         </li>
         <li class="nav-item">
-          <a class="text-[#003b6f] hover:opacity-80 px-3 py-2" aria-current="page" href="#">Kegiatan</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/kegiatan' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/kegiatan">Kegiatan</a>
         </li>
         <li class="nav-item">
-          <a class="text-[#003b6f] hover:opacity-80 px-3 py-2" aria-current="page" href="/register">Pendaftaran</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/daftar' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/daftar">Pendaftaran Anggota</a>
         </li>
         <li class="nav-item">
-          <a class="text-[#003b6f] hover:opacity-80 px-3 py-2" aria-current="page" href="#">Donasi</a>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="text-[#003b6f] hover:opacity-80 px-3 py-2" aria-current="page" href="#">LAPORAN</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/bantuan' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/bantuan">Pengajuan Bantuan</a>
         </li>
         <li class="nav-item">
-          <a class="text-[#003b6f] hover:opacity-80 px-3 py-2" aria-current="page" href="#">ARSIP</a>
-        </li> -->
-        <!-- <li class="nav-item">
-          <a class="text-[#003b6f] hover:opacity-80 px-3 py-2" aria-current="page" href="#">LOGIN</a>
-        </li> -->
+          <a :class="`text-white hover:opacity-80 px-[50px] py-[13px] bg-main rounded-full`" aria-current="page" href="#">Donasi</a>
+        </li>
       </ul>
     </div>
+    <div class="lg:hidden">
+          <button
+            @click="toggleMenu"
+            :class="`text-gray-600 hover:text-gray-800 focus:text-gray-800 block focus:outline-none ms-auto`"
+          >
+            <svg
+              class="w-8 h-8 mr-2"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                v-if="!isMenuOpen"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 6h16M6 12h16M6 18h16"
+              ></path>
+              <path
+                v-if="isMenuOpen"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
   </div>
 </nav>
 </template>
@@ -100,6 +151,7 @@ export default {
     },
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+      console.log(this.$route.path)
     },
     toggleDropdown() {
       this.isDropdownOpen = !this.isDropdownOpen;
@@ -128,3 +180,14 @@ export default {
   },
 };
 </script>
+
+<style>
+/* Example transition classes */
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.3s ease;
+}
+.slide-enter, .slide-leave-to {
+  transform: translateX(-100%);
+}
+
+</style>

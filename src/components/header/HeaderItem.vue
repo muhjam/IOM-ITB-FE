@@ -1,7 +1,7 @@
 <template>
-	<Carousel>
-	  <Slide v-for="slide in 10" :key="slide">
-		<div class="relative h-[100vh] w-full bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${require('@/assets/image/slide1.png')})` }"></div>
+	<Carousel class="mt-[80px]">
+	  <Slide v-for="slide in 3" :key="slide">
+		<div class="relative h-[30vh] sm:h-[90vh] w-full bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${require(`@/assets/image/slide${slide}.png`)})` }"></div>
 	  </Slide>
   
 	  <template #addons>

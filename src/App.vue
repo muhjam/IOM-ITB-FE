@@ -1,7 +1,7 @@
 <template>
   <metainfo>
     <template v-slot:title="{ content }">{{
-      content ? `Gethired | ${content}` : `Home`
+      content ? `IOM-ITB | ${content}` : `Home`
     }}</template>
   </metainfo>
   <router-view />
@@ -16,12 +16,12 @@ export default {
 
 <style>
 @import "./css/style.css";
-@import url("https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 html,
 body {
   scroll-behavior: smooth;
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
