@@ -13,8 +13,8 @@
         </li>
         <li class="mr-4">
           <a
-            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/tentang' ? 'font-[800]' : 'font-[500]'}`"
-            href="/tentang"
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/tentang-kami' ? 'font-[800]' : 'font-[500]'}`"
+            href="/tentang-kami"
           >Tentang Kami</a>
         </li>
         <li class="py-2">
@@ -60,7 +60,7 @@
           <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/">Beranda</a>
         </li>
         <li class="nav-item">
-          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/tentang' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/tentang">Tentang Kami</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/tentang-kami' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/tentang-kami">Tentang Kami</a>
         </li>
         <li class="nav-item">
           <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/kegiatan' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/kegiatan">Kegiatan</a>
