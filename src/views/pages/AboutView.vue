@@ -1,8 +1,8 @@
 <template>
-  <div class="bg-white pt-[80px] pb-[32px]">
-    <h2 class="text-main px-[30px] md:px-[70px] font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Latar Belakang</h2>
+  <div class="bg-white pt-[80px] pb-[32px] px-[18px] md:px-[70px]">
+    <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Latar Belakang</h2>
     <div class="flex flex-col md:flex-row justify-between items-center">
-      <div class="w-full px-[30px] md:px-[70px] text-justify">
+      <div class="w-full text-justify">
         <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Sejarah</h4>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
         {{ history }}
@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  <div class="border border-[#003793] w-[90%] mx-auto"></div>
+  <div class="border w-[90%] mx-auto opacity-50"></div>
 
   <div class="bg-white p-[16px] md:p-[24px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Ruang Lingkup Kegiatan IOM-ITB</h2>
@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <div class="border border-[#003793] w-[90%] mx-auto"></div>
+  <div class="border w-[90%] mx-auto opacity-50"></div>
 
   <div class="bg-white p-[16px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Keanggotaan IOM</h2>
@@ -59,13 +59,13 @@
     </div>
   </div>
 
-  <div class="border border-[#003793] w-[90%] mx-auto"></div>
+  <div class="border w-[90%] mx-auto opacity-50"></div>
 
-  <div class="bg-white p-[16px]">
-    <h2 class="text-main px-[30px] md:px-[70px] font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Pengembang Website IOM-ITB</h2>
+  <div class="bg-white p-[16px] px-[18px] md:px-[70px]">
+    <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Pengembang Website IOM-ITB</h2>
     <div class="flex flex-col md:flex-row justify-between items-center">
       <img :src="require('@/assets/image/ayi-purbasari.png')" alt="IOM-ITB" class="w-full block md:hidden md:w-1/2 object-cover p-4 md:p-20">
-      <div class="w-full px-[30px] md:px-[70px] text-justify">
+      <div class="w-full text-justify">
         <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Dr. Ayi Purbasari, ST., MT.</h4>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
           {{ "NIDN: 0424057201\nId Sinta: 5987512\nId Scopus: 55001755600\nInstagram: ayi.purbasari\n\n" }}
@@ -86,12 +86,12 @@
     </div>
   </div>
 
-  <div class="border border-[#003793] w-[90%] mx-auto"></div>
+  <div class="border w-[90%] mx-auto opacity-50"></div>
 
   <div class="bg-white p-[16px]">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <img :src="require('@/assets/image/ida.png')" alt="IOM-ITB" class="w-full md:w-1/2 object-cover p-4 md:p-20">
-      <div class="w-full px-[30px] md:px-[70px] text-justify">
+      <div class="w-full text-justify">
         <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Ida Ayu Suci Levi, S.Des</h4>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
           {{ "Branding Development Consultant\nCommunity Development Officer\n\n" }}

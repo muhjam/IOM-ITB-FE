@@ -25,6 +25,18 @@ const routes = [
         component: () => import("@/views/pages/RegisterView.vue"),
         meta: { haveAuthenticated: true },
       },
+      {
+        path: "/kegiatan",
+        name: "Activity",
+        component: () => import("@/views/pages/ActivityView.vue"),
+        meta: { haveAuthenticated: true },
+      },
+      {
+        path: "/donasi",
+        name: "Donation",
+        component: () => import("@/views/pages/DonationView.vue"),
+        meta: { haveAuthenticated: true },
+      },
     ],
   },
   {

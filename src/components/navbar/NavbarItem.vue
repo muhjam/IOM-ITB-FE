@@ -72,7 +72,7 @@
           <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/bantuan' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/bantuan">Pengajuan Bantuan</a>
         </li>
         <li class="nav-item">
-          <a :class="`text-white hover:opacity-80 px-[50px] py-[13px] bg-main rounded-full`" aria-current="page" href="#">Donasi</a>
+          <a :class="`text-white hover:opacity-80 px-[50px] py-[13px] bg-main rounded-full`" aria-current="page" href="/donasi">Donasi</a>
         </li>
       </ul>
     </div>

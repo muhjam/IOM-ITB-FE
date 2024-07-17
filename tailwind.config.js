@@ -51,9 +51,9 @@ module.exports = {
           dark: "#4C4C4C",
         },
         colorSecond: {
-          light: "##F2F7FC",
-          DEFAULT: "##F2F7FC",
-          dark: "##F2F7FC",
+          light: "#F2F7FC",
+          DEFAULT: "#F2F7FC",
+          dark: "#F2F7FC",
         },
       },
     },
