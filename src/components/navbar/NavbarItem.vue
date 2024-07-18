@@ -3,7 +3,7 @@
   <transition name="slide">
       <ul
         v-if="isMenuOpen"
-        class="md:hidden fixed top-0 left-0 mr-10 z-10 w-[250px] sm:w-[400px] h-[100vh] bg-white shadow-lg"
+        class="xl:hidden fixed top-0 left-0 mr-10 z-10 w-[250px] sm:w-[400px] h-[100vh] bg-white shadow-lg"
       >
         <li class="py-2">
           <a
@@ -45,17 +45,17 @@
     </transition>
   <div class="container mx-auto flex items-center justify-between">
     <a class="text-main font-[700] flex items-center" href="/">
-      <img :src="require('@/assets/image/logo.png')" alt="IOM ITB Logo" class="w-14 md:w-16 h-auto mr-3">
+      <img :src="require('@/assets/image/logo.png')" alt="IOM ITB Logo" class="w-14 xl:w-16 h-auto mr-3">
       <div>
-        <p class="text-[14px] md:text-[18px] font-[700] leading-tight">Ikatan Orang Tua Mahasiswa</p>
-        <p class="text-[14px] md:text-[16px] font-[600] leading-tight">Institut Teknologi Bandung</p>
+        <p class="text-[14px] xl:text-[18px] font-[700] leading-tight">Ikatan Orang Tua Mahasiswa</p>
+        <p class="text-[14px] xl:text-[16px] font-[600] leading-tight">Institut Teknologi Bandung</p>
       </div>
     </a>
-    <button class="text-main lg:hidden" id="navbarToggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="text-main xl:hidden" id="navbarToggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="fa fa-bars"></span>
     </button>
-    <div class="hidden w-full lg:flex lg:items-center lg:w-auto" id="navbarNav">
-      <ul class="flex flex-col lg:flex-row lg:space-x-4">
+    <div class="hidden w-full xl:flex xl:items-center xl:w-auto" id="navbarNav">
+      <ul class="flex flex-col xl:flex-row xl:space-x-4">
         <li class="nav-item">
           <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/">Beranda</a>
         </li>
@@ -76,7 +76,7 @@
         </li>
       </ul>
     </div>
-    <div class="lg:hidden">
+    <div class="xl:hidden">
           <button
             @click="toggleMenu"
             :class="`text-gray-600 hover:text-gray-800 focus:text-gray-800 block focus:outline-none ms-auto`"

@@ -62,52 +62,10 @@
   <div class="border w-[90%] mx-auto opacity-50"></div>
 
   <div class="bg-white p-[16px] px-[18px] md:px-[70px]">
-    <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Pengembang Website IOM-ITB</h2>
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <img :src="require('@/assets/image/ayi-purbasari.png')" alt="IOM-ITB" class="w-full block md:hidden md:w-1/2 object-cover p-4 md:p-20">
-      <div class="w-full text-justify">
-        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Dr. Ayi Purbasari, ST., MT.</h4>
-        <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
-          {{ "NIDN: 0424057201\nId Sinta: 5987512\nId Scopus: 55001755600\nInstagram: ayi.purbasari\n\n" }}
-        </p>
-        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Alumni</h4>
-        <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
-        {{ "- S1 Informatika ITB\n- S2 Informatika ITB\n- S3 Sekolah Teknik Elektro dan Informatika ITB\n\n" }}
-        </p>
-        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Organisasi</h4>
-          <ul class="pl-[20px] list-disc font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
-            <li>Asesor BNSP, 2018 – Sekarang (di LSP P1 Unpas)</li>
-            <li>Wakil Ketua III Asosiasi Pendidikan Tinggi Informatika dan Komputer (Aptikom) Provinsi Jawa Bara</li>
-            <li>Anggota Bidang Publikasi Dosen Asosiasi Pendidikan Tinggi Informatika dan Komputer (APTIKOM PUSAT)</li>
-            <li>Evaluator IABEE: Indonesian Accreditation Board for Engineering Education</li>
-          </ul>
-      </div>
-      <img :src="require('@/assets/image/ayi-purbasari.png')" alt="IOM-ITB" class="w-full hidden md:block md:w-1/2 object-cover p-4 md:p-20">
-    </div>
-  </div>
-
-  <div class="border w-[90%] mx-auto opacity-50"></div>
-
-  <div class="bg-white p-[16px]">
-    <div class="flex flex-col md:flex-row justify-between items-center">
-      <img :src="require('@/assets/image/ida.png')" alt="IOM-ITB" class="w-full md:w-1/2 object-cover p-4 md:p-20">
-      <div class="w-full text-justify">
-        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Ida Ayu Suci Levi, S.Des</h4>
-        <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
-          {{ "Branding Development Consultant\nCommunity Development Officer\n\n" }}
-        </p>
-        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Alumni</h4>
-        <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
-        {{ "- Desain Tekstil FSRD ITB 1993\n\n" }}
-        </p>
-        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700]">Organisasi</h4>
-          <ul class="pl-[20px] list-disc font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
-            <li>Ketua Pengurus Yayasan Adab Utama Naraloka</li>
-            <li>Wakil Ketua Pengurus Yayasan Atirath Kala Tirta</li>
-            <li>Pendiri dan Sekretaris Dewan Pengawas Perkumpulan Pergerakan Penyandang Disabilitas dan Lansia (DILANS) Indonesia</li>
-            <li>Bidang Humas Ikatan Alumni ITB</li>
-          </ul>
-      </div>
+    <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">Struktur Kepengurusan IOM-ITB Pusat
+Periode 2024 - 2027</h2>
+    <div class="flex justify-center items-center">
+      <img :src="require('@/assets/image/struktur-organisasi.png')" alt="Struktur Organisasi" class="w-full object-cover p-4 md:p-20">
     </div>
   </div>
 

@@ -11,7 +11,7 @@
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line mb-[24px]">
           {{ ' Selamat Hari Lingkungan Hidup Sedunia!\nBapak/Ibu Orangtua Mahasiswa ITB yang terhormat, yuk ajak Mahasiswa untuk mendonasikan buku-buku kuliahnya\n (Terutama buku TPB) yang sudah tidak terpakai, untuk dapat digunakan lagi oleh Mahasiswa lainnya.\n Dengan mendonasikan buku-buku, selain memperpanjang manfaat buku-buku tersebut dan membantu Mahasiswa lainnya, kita juga berperan untuk mengurangi jumlah pohon yang ditebang untuk pembuatan kertas.\n Untuk drop point, informasi donasi dan juga mendapatkan buku yang dibutuhkan silakan hubungi kami:\n- Whatsapp: 0856-2465-4990\n- Student Center Timur ITB Lantai 2\n- Jl. Ganesha 10, Bandung' }}
         </p>
-        <a href="https://www.instagram.com/p/C70RubxByTG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
+        <a href="https://www.instagram.com/p/C70RubxByTG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="inline-flex items-center px-3 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
             Baca Selengkapnya
           </a>
       </div>

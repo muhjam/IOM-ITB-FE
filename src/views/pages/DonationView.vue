@@ -11,9 +11,9 @@
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line mb-[24px]">
           IOM-ITB akan membantu para mahasiswa yang sedang membutuhkan bantuan dana lebih dalam aspek keuangan apapun jenisnya.
         </p>
-        <a href="https://www.instagram.com/p/C70RubxByTG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
+        <button @click="openTallyPopup" class="inline-flex items-center px-3 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
           Donasi Sekarang
-        </a>
+        </button>
       </div>
       <img :src="require('@/assets/image/donation-header.png')" alt="Donation" class="w-full md:w-1/2 p-4 md:p-20 hidden md:block">
     </div>
@@ -125,7 +125,33 @@ export default {
     };
   },
   computed: {},
-  methods: {},
+  methods: {
+    openTallyPopup() {
+      const formId = 'mZJe8e';
+      const options = {
+        layout: 'modal',
+        width: 700,
+        autoClose: 5000,
+        hiddenFields: {
+          ref: 'downloads',
+          email: 'alice@example.com'
+        },
+        onOpen: () => {
+          // Callback saat popup dibuka
+          console.log('Popup form dibuka');
+        },
+        onClose: () => {
+          // Callback saat popup ditutup
+          console.log('Popup form ditutup');
+        },
+        onSubmit: (payload) => {
+          // Callback saat form disubmit
+          console.log('Form disubmit dengan payload:', payload);
+        }
+      };
+      Tally.openPopup(formId, options);
+    }
+  },
 };
 </script>
 
