@@ -14,9 +14,27 @@ const routes = [
         meta: { haveAuthenticated: true },
       },
       {
+        path: "/tentang-kami",
+        name: "About",
+        component: () => import("@/views/pages/AboutView.vue"),
+        meta: { haveAuthenticated: true },
+      },
+      {
         path: "/daftar",
         name: "Register",
         component: () => import("@/views/pages/RegisterView.vue"),
+        meta: { haveAuthenticated: true },
+      },
+      {
+        path: "/kegiatan",
+        name: "Activity",
+        component: () => import("@/views/pages/ActivityView.vue"),
+        meta: { haveAuthenticated: true },
+      },
+      {
+        path: "/donasi",
+        name: "Donation",
+        component: () => import("@/views/pages/DonationView.vue"),
         meta: { haveAuthenticated: true },
       },
     ],

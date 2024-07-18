@@ -4,7 +4,11 @@
     <div class="flex-grow">
       <router-view />
     </div>
+<<<<<<< HEAD
     <ButtonItem />
+=======
+    <ButtonItem v-if="$route.path !== '/daftar'" />
+>>>>>>> ab94692ff2676a83322483e2e459528bd3777a79
     <FooterItem />
   </div>
 </template>
