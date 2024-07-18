@@ -4,6 +4,7 @@
     <div class="flex-grow">
       <router-view />
     </div>
+    <ButtonItem />
     <FooterItem />
   </div>
 </template>
@@ -11,6 +12,7 @@
 <script>
 import NavbarItem from "@/components/navbar/NavbarItem.vue";
 import FooterItem from "@/components/footer/FooterItem.vue";
+import ButtonItem from "@/components/button/ButtonItem.vue";
 import { GET_USER } from "@/store/auth.module";
 
 export default {
@@ -18,6 +20,7 @@ export default {
   components: {
     NavbarItem,
     FooterItem,
+    ButtonItem
   },
   computed: {
     currentAppType() {
