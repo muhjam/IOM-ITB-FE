@@ -1,8 +1,8 @@
 <template>
     <div class="max-w-[1080px] mx-auto pt-[100px] pb-[32px] px-[18px] md:px-[70px] font-bold text-[#413e66]">
       <div class="bg-white shadow-md rounded-lg p-6">
-        <h2 class="text-4xl mb-4">Daftar Anggota Baru</h2>
-        <iframe data-tally-src="https://tally.so/embed/3jxMXJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1720" frameborder="0" marginheight="0" marginwidth="0" title="PENDAFTARAN ANGGOTA"></iframe>
+        <h2 class="text-4xl mb-4">Pengajan Bantuan</h2>
+        <iframe data-tally-src="https://tally.so/embed/mV8yPg?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1720" frameborder="0" marginheight="0" marginwidth="0" title="PENDAFTARAN ANGGOTA"></iframe>
       </div>
     </div>
   </template>

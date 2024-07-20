@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white pt-[80px] pb-[32px] px-[18px] md:px-[70px]">
+  <div class="bg-white pt-[100px] pb-[32px] px-[18px] md:px-[70px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Kegiatan Terbaru</h2>
     <img :src="require('@/assets/image/kegiatan-terkini.png')" alt="IOM-ITB" class="w-full md:w-1/2 object-cover p-4 md:p-20 block md:hidden">
     <div class="flex flex-col md:flex-row justify-between">
