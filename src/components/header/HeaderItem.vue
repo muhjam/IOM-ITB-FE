@@ -1,5 +1,5 @@
 <template>
-	<Carousel class="pt-[90px]">
+	<Carousel class="pt-[80px]">
 	  <Slide v-for="slide in 2" :key="slide">
 		<div class="relative h-[30vh] sm:h-[90vh] w-full bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${require(`@/assets/image/slide${slide}.png`)})` }"></div>
 	  </Slide>
