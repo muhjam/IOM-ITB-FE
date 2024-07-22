@@ -29,9 +29,10 @@
         </a>
         <div class="p-5">
           <a href="#">
-            <h5 class="mb-2 text-xl md:text-2xl font-bold tracking-tight text-white">{{ v.title }}</h5>
+            <h5 class="text-xl md:text-2xl font-bold tracking-tight text-white">{{ truncateText(v.title, 20) }}</h5>
           </a>
-          <p class="mb-3 font-normal text-white">{{ v.description }}</p>
+          <span class="text-[14px] font-[600] text-white">{{ v.date }}</span>
+          <p class="mb-3 text-[14px] mt-2 text-white">{{ truncateText(v.description, 200) }}</p>
           <a :href="v.url" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-main bg-white rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
             Baca Selengkapnya
             <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -91,46 +92,45 @@ export default {
     return {
       activity:[
       {
-        image: "slide1.png",
-        title: "Noteworthy technology acquisition 2021" ,
-        description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+        image: "kegiatan1.png",
+        title: "Selamat Ulang Tahun IOM-ITB yang ke-56!" ,
+        date: "24 Juli 2024",
+        description: "Selamat pagi, selamat berakhir pekan.\nDengan penuh rasa syukur, hari ini tanggal 14 Juli 2024, IOM-ITB genap berusia 56 tahun sejak pertama kali didirikan pada tanggal 14 Juli 1968.",
         url: "/"
       },
       {
-        image: "slide1.png",
-        title: "Noteworthy technology acquisition 2023" ,
-        description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+        image: "kegiatan2.png",
+        title: "Pertemuan antara Pengurus Baru dan Mantan Pengurus IOM-ITB di Ruang",
+        date: "10 Juni 2024",
+        description: "Rektor ITB Prof. Reini Wirahadikusumah, Ph. D. (ke-4 kiri) didampingi Sekretaris Institut Prof. Dr. Ing. Ir. Widjaja Martokusumo (ke-2 kiri) dan Direktur Direktorat Kemahasiswaan",
         url: "/"
       },
       {
-        image: "slide1.png",
-        title: "Noteworthy technology acquisition 2021" ,
-        description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-        url: "/"
+        image: "kegiatan3.png",
+        title: "Webinar Spesialisasi Kriya di FSRD ITB",
+        date: "01 Juli 2024",
+        description: "Halo para mahasiswa baru FSRD, atau siswa SMA yang akan kuliah di FSRD dan juga para orang tua yang putra/putrinya kuliah/akan kuliah di FSRD\n\nIngin tau lebih banyak tentang Spesialisasi Kriya di FSRD ITB?",
+        url: "/",
       },
       {
-        image: "slide1.png",
-        title: "Noteworthy technology acquisition 2023" ,
-        description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-        url: "/"
-      },
-      {
-        image: "slide1.png",
-        title: "Noteworthy technology acquisition 2021" ,
-        description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
-        url: "/"
-      },
-      {
-        image: "slide1.png",
-        title: "Noteworthy technology acquisition 2023" ,
-        description: "Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+        image: "kegiatan4.png",
+        title: "DIKPUS 2024 untuk Mahasiswa ITB 2023",
+        date: "25 Juni 2024",
+        description: "Menjadi Mahasiswa salah satunya adalah membuka kesempatan untuk berjejaring. \n\nDan mengikuti serta aktif di Organisasi Kemahasiswaan adalah langkah awal yang baik untuk memperluas",
         url: "/"
       },
     ]
     };
   },
   computed: {},
-  methods: {}
+  methods: {
+    truncateText(text, maxLength) {
+      if (text && text.length > maxLength) {
+        return text.slice(0, maxLength) + "...";
+      }
+      return text;
+    },
+  }
 };
 </script>
 
