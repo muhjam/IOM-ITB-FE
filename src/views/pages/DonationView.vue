@@ -65,7 +65,10 @@
           {{ "Setiap tahunnya, Institut Teknologi Bandung menerima ribuan mahasiswa dari berbagai provinsi di Indonesia. Mereka masuk ke ITB melalui tiga jalur penerimaan, di antaranya SNBP, SNBT, Seleksi Mandiri dan ITB International Undergraduate Program (IUP).\n\nPara mahasiswa yang diterima di ITB memiliki latar belakang ekonomi yang berbeda. Oleh karena itu, ITB tidak ingin membatasi kesempatan belajar mahasiswa Indonesia terutama karena masalah finansial. Untuk itu, berbagai fasilitas beasiswa disediakan untuk membantu mahasiswa yang kesulitan di bidang ekonomi, salah satunya beasiswa IOM." }}
         </p>
         <br>
+        <div class="w-fit text-center">
         <img :src="require('@/assets/image/ketua-umum-iom.png')" alt="Ketua Umum Iom" class="w-[500px]">
+        <span class="text-gray-500">Ketua Umum - Hendro Setyanto, S.Si., M.Si.</span>
+      </div>
       </div>
     </div>
   </div>
