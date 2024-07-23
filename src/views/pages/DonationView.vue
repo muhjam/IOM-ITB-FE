@@ -62,8 +62,10 @@
       <div class="w-full md:w-1/2 text-justify p-4 md:p-0">
         <h4 class="text-[24px] md:text-[50px] capitalize text-main font-[700]">Berdonasi Bersama IOM-ITB</h4>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line">
-          {{ "Setiap tahunnya, Institut Teknologi Bandung menerima ribuan mahasiswa dari berbagai provinsi di Indonesia. Mereka masuk ke ITB melalui tiga jalur penerimaan, di antaranya SBMPTN, SNMPTN, dan Seleksi Mandiri ITB.\n\nPara mahasiswa yang diterima di ITB memiliki latar belakang ekonomi yang berbeda. Oleh karena itu, ITB tidak ingin membatasi kesempatan belajar mahasiswa Indonesia terutama karena masalah finansial. Untuk itu, berbagai fasilitas beasiswa disediakan untuk membantu mahasiswa yang kesulitan di bidang ekonomi, salah satunya beasiswa IOM." }}
+          {{ "Setiap tahunnya, Institut Teknologi Bandung menerima ribuan mahasiswa dari berbagai provinsi di Indonesia. Mereka masuk ke ITB melalui tiga jalur penerimaan, di antaranya SNBP, SNBT, International Undergraduate Program (IUP) dan Seleksi Mandiri ITB.\n\nPara mahasiswa yang diterima di ITB memiliki latar belakang ekonomi yang berbeda. Oleh karena itu, ITB tidak ingin membatasi kesempatan belajar mahasiswa Indonesia terutama karena masalah finansial. Untuk itu, berbagai fasilitas beasiswa disediakan untuk membantu mahasiswa yang kesulitan di bidang ekonomi, salah satunya beasiswa IOM." }}
         </p>
+        <br>
+        <img :src="require('@/assets/image/ketua-umum-iom.png')" alt="Ketua Umum Iom" class="w-[500px]">
       </div>
     </div>
   </div>
