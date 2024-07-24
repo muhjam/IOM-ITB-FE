@@ -11,8 +11,9 @@
             </div>
           </div>
           <p class="mb-4">
-            Gedung Kampus Center Barat Lantai 1<br>
-            Jl. Ganesa No. 10 Lebak Siliwangi Kec. Coblong Kota Bandung 40132
+            Gedung Kampus Center Timur Lantai 1<br/>
+            Jl. Ganesa No. 10 Lebak Siliwangi Kec. <br/>
+            Coblong Kota Bandung 40132
           </p>
         </div>
         <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
