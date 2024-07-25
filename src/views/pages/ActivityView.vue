@@ -4,18 +4,18 @@
     <img :src="require('@/assets/image/kegiatan-terkini.png')" alt="IOM-ITB" class="w-full md:w-1/2 object-cover p-4 md:p-20 block md:hidden">
     <div class="flex flex-col md:flex-row justify-between">
       <div class="w-full text-justify">
-        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700] mb-[4px]">Donasi Buku IOM-ITB</h4>
+        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700] mb-[4px]">Penerimaan Anggota Baru IOM-ITB 2024</h4>
         <p class="font-[500] text-[14px] md:text-[16px] text-main opacity-60 whitespace-pre-line mb-[24px]">
-          05 Juni 2024 | 3 jam yang lalu
+          24 Juli 2024
         </p>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line mb-[24px]">
-          {{ ' Selamat Hari Lingkungan Hidup Sedunia!\nBapak/Ibu Orangtua Mahasiswa ITB yang terhormat, yuk ajak Mahasiswa untuk mendonasikan buku-buku kuliahnya\n (Terutama buku TPB) yang sudah tidak terpakai, untuk dapat digunakan lagi oleh Mahasiswa lainnya.\n Dengan mendonasikan buku-buku, selain memperpanjang manfaat buku-buku tersebut dan membantu Mahasiswa lainnya, kita juga berperan untuk mengurangi jumlah pohon yang ditebang untuk pembuatan kertas.\n Untuk drop point, informasi donasi dan juga mendapatkan buku yang dibutuhkan silakan hubungi kami:\n- Whatsapp: 0856-2465-4990\n- Student Center Timur ITB Lantai 2\n- Jl. Ganesha 10, Bandung' }}
+          {{ truncateText("Sebagaimana layaknya menyambut anggota baru yang hadir dalam keluarga, Ikatan Orangtua Mahasiswa ITB (IOM-ITB) melaksanakan acara Penerimaan Anggota Baru (PAB) yang menjadi bagian dari rangkaian kegiatan Penyambutan Mahasiswa Baru (PMB) ITB 2024.\n\nAcara akan dilaksanakan pada :\nJumat, 26 Juli 2024\n13:30 - 16:00 WIB\nDilaksanakan secara Hybrid Meeting\nONLINE : Link Zoom akan diberikan sehari sebelum waktu pelaksanaan\n\nSelain Upacara Penerimaan, acara ini akan diisi oleh 2 _Talkshow_ :\n💎 KEMAHASISWAAN :\nBERBAGI PERAN DAN SINERGI ANTARA ITB DAN ORANG TUA, bersama\n- Bapak D.Arch .G.P. Adhitama,S.Sn.,M.Sn (Direktur Direktorat Kemahasiswaan ITB)\n- Bapak Prof. Brian Yuliarto., S.T., M.Eng.,Ph.D. (Dekan FTI-ITB, Perwakilan Alumni Beswan IOM-ITB)\n- Bapak Hendro Setyanto, M.Si (Ketua Umum IOM-ITB 2024-2027)\n\n💎 MENYIAPKAN GENERASI EMAS TANPA CEMAS BERSAMA IOM-ITB*,\nbersama Pembicara Utama :\n*Bapak Ir. Arcandra Tahar, M.Sc.,Ph.D.\n\nKedua _Talkshow_ akan dipandu oleh\n- Bapak D.Sc. (Tech) Imam Santoso, S.T. M. Phil (Staff Pengajar FTTM ITB, Penulis, Motivator Pendidikan)\n- Fidella Marwa Huwaida (Presiden Keluarga Mahasiswa ITB periode 2024-2025)\n\nMari bersama kita hadir untuk memaknai penerimaan menjadi bagian dari Keluarga Besar Ikatan Orangtua Mahasiswa ITB (IOM-ITB)", 850) }}
         </p>
-        <a href="https://www.instagram.com/p/C70RubxByTG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="inline-flex items-center px-3 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
+        <a href="https://www.instagram.com/p/C9woFpyTLgz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" class="inline-flex items-center px-3 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
             Baca Selengkapnya
           </a>
       </div>
-      <img :src="require('@/assets/image/kegiatan-terkini.png')" alt="IOM-ITB" class="w-full md:w-1/2 px-4 md:px-20 hidden md:block">
+      <img :src="require('@/assets/image/kegiatan-terkini.png')" alt="IOM-ITB" class="w-full md:w-1/2 md:h-1/2 px-4 md:px-20 hidden md:block">
     </div>
   </div>
 
@@ -25,7 +25,7 @@
     <div class="flex overflow-x-auto gap-4 snap-x">
       <div v-for="(v, i) in activity" :key="i" class="min-w-[250px] md:min-w-[300px] bg-main text-white border border-gray-200 rounded-lg shadow snap-center">
         <a href="#">
-          <img class="rounded-t-lg" :src="require(`@/assets/image/${v.image}`)" alt="" />
+          <img class="rounded-t-lg h-[200px] w-full object-cover" :src="require(`@/assets/image/${v.image}`)" alt="" />
         </a>
         <div class="p-5">
           <a href="#">
@@ -59,17 +59,17 @@ export default {
     return {
       activity:[
       {
-        image: "kegiatan1.png",
-        title: "Selamat Ulang Tahun IOM-ITB yang ke-56!" ,
-        date: "24 Juli 2024",
-        description: "Selamat pagi, selamat berakhir pekan.\nDengan penuh rasa syukur, hari ini tanggal 14 Juli 2024, IOM-ITB genap berusia 56 tahun sejak pertama kali didirikan pada tanggal 14 Juli 1968.",
+        image: "kegiatan5.png",
+        title: "Donasi Buku IOM-ITB",
+        date: "05 Juni 2024",
+        description: "Selamat Hari Lingkungan Hidup Sedunia!\nBapak/Ibu Orangtua Mahasiswa ITB yang terhormat, yuk ajak Mahasiswa untuk mendonasikan buku-buku kuliahnya\n (Terutama buku TPB) yang sudah tidak terpakai, untuk dapat digunakan lagi oleh Mahasiswa lainnya.\n Dengan mendonasikan buku-buku, selain memperpanjang manfaat buku-buku tersebut dan membantu Mahasiswa lainnya, kita juga berperan untuk mengurangi jumlah pohon yang ditebang untuk pembuatan kertas.\n Untuk drop point, informasi donasi dan juga mendapatkan buku yang dibutuhkan silakan hubungi kami:\n- Whatsapp: 0856-2465-4990\n- Student Center Timur ITB Lantai 2\n- Jl. Ganesha 10, Bandung",
         url: "/"
       },
       {
-        image: "kegiatan2.png",
-        title: "Pertemuan antara Pengurus Baru dan Mantan Pengurus IOM-ITB di Ruang",
-        date: "10 Juni 2024",
-        description: "Rektor ITB Prof. Reini Wirahadikusumah, Ph. D. (ke-4 kiri) didampingi Sekretaris Institut Prof. Dr. Ing. Ir. Widjaja Martokusumo (ke-2 kiri) dan Direktur Direktorat Kemahasiswaan",
+        image: "kegiatan4.png",
+        title: "DIKPUS 2024 untuk Mahasiswa ITB 2023",
+        date: "25 Juni 2024",
+        description: "Menjadi Mahasiswa salah satunya adalah membuka kesempatan untuk berjejaring. \n\nDan mengikuti serta aktif di Organisasi Kemahasiswaan adalah langkah awal yang baik untuk memperluas",
         url: "/"
       },
       {
@@ -80,10 +80,17 @@ export default {
         url: "/",
       },
       {
-        image: "kegiatan4.png",
-        title: "DIKPUS 2024 untuk Mahasiswa ITB 2023",
-        date: "25 Juni 2024",
-        description: "Menjadi Mahasiswa salah satunya adalah membuka kesempatan untuk berjejaring. \n\nDan mengikuti serta aktif di Organisasi Kemahasiswaan adalah langkah awal yang baik untuk memperluas",
+        image: "kegiatan2.png",
+        title: "Pertemuan antara Pengurus Baru dan Mantan Pengurus IOM-ITB di Ruang",
+        date: "10 Juni 2024",
+        description: "Rektor ITB Prof. Reini Wirahadikusumah, Ph. D. (ke-4 kiri) didampingi Sekretaris Institut Prof. Dr. Ing. Ir. Widjaja Martokusumo (ke-2 kiri) dan Direktur Direktorat Kemahasiswaan",
+        url: "/"
+      },
+      {
+        image: "kegiatan1.png",
+        title: "Selamat Ulang Tahun IOM-ITB yang ke-56!" ,
+        date: "24 Juli 2024",
+        description: "Selamat pagi, selamat berakhir pekan.\nDengan penuh rasa syukur, hari ini tanggal 14 Juli 2024, IOM-ITB genap berusia 56 tahun sejak pertama kali didirikan pada tanggal 14 Juli 1968.",
         url: "/"
       },
     ]
