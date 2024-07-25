@@ -9,7 +9,7 @@
           IOM-ITB
         </h4>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line mb-[24px]">
-          Program IOM-ITB adalah membantu para mahasiswa ITB yang membutuhkan bantuan baik dalam hal finansial (UKT, Biaya Hidup, dll) ataupun non-finansial (pendampingan).
+          IOM-ITB membantu para mahasiswa ITB yang membutuhkan bantuan, baik dalam hal finansial (UKT, Biaya Hidup, dll) ataupun non-finansial (pendampingan).
         </p>
         <button @click="openTallyPopup" class="inline-flex items-center px-3 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
           Donasi Sekarang
