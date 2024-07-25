@@ -29,11 +29,11 @@
           <p>organiomitb@gmail.com</p>
           <p>+62 856-2465-4990</p>
           <div class="flex space-x-4 mt-2">
-            <a href="https://www.instagram.com/iom_itb" class="w-[18px] h-[18px]"><img :src="require('@/assets/icon/instagram.svg')"/></a>
+            <a target="_blank" href="https://www.instagram.com/iom_itb" class="w-[18px] h-[18px]"><img :src="require('@/assets/icon/instagram.svg')"/></a>
             <a href="#" class="w-[18px] h-[18px]"><img :src="require('@/assets/icon/facebook.svg')"/></a>
             <a href="#" class="w-[18px] h-[18px]"><img :src="require('@/assets/icon/line.svg')"/></a>
             <a href="#" class="w-[18px] h-[18px]"><img :src="require('@/assets/icon/twitter.svg')"/></a>
-            <a href="https://youtube.com/@iom-itb" class="w-[18px] h-[18px]"><img :src="require('@/assets/icon/youtube.svg')"/></a>
+            <a target="_blank" href="https://youtube.com/@iom-itb" class="w-[18px] h-[18px]"><img :src="require('@/assets/icon/youtube.svg')"/></a>
           </div>
         </div>
         <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
