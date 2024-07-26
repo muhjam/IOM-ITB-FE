@@ -3,10 +3,10 @@
       <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Grafik</h2>
       <div class="flex flex-col md:flex-row justify-between md:items-center mb-[8px] gap-2 md:px-10">
         <div class="flex gap-2 items-center">
-         <button @click="modeHandler('year')" :class="`${mode === 'year' ? 'text-white bg-main' : 'text-main bg-white'} border border-main px-[8px] py-[4px] w-fit h-fit rounded-[5px]`">Pertahun</button> <button @click="modeHandler('grade')" :class="`${mode === 'grade' ? 'text-white bg-main' : 'text-main bg-white'} border border-main px-[8px] py-[4px] w-fit h-fit rounded-[5px]`">Perangkatan</button>
+         <button @click="modeHandler('year')" :class="`${mode === 'year' ? 'text-white bg-main' : 'text-main bg-white'} border border-main px-[8px] py-[4px] w-fit h-fit rounded-[5px] text-[14px] md:text-[16px]`">Pertahun</button> <button @click="modeHandler('grade')" :class="`${mode === 'grade' ? 'text-white bg-main' : 'text-main bg-white'} border border-main px-[8px] py-[4px] w-fit h-fit rounded-[5px] text-[14px] md:text-[16px]`">Perangkatan</button>
         </div>
          <div class="w-full md:w-fit h-fit flex">
-              <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" v-model="graphic">
+              <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-[14px] md:text-[16px] rounded-[5px] focus:ring-blue-500 focus:border-blue-500 block w-full px-[8px] py-[4px]" v-model="graphic">
                 <option selected value="0">Rekap Semua</option>
                 <option value="1">Biaya Hidup</option>
                 <option value="2">Tugas Akhir</option>
@@ -19,7 +19,6 @@
     </div>
   </div>
   </template>
-  
   
   <script>
   export default {

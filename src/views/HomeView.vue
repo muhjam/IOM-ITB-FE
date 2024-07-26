@@ -44,6 +44,10 @@
     </div>
   </div>
 
+  <div class="bg-white py-[50px] md:py-[104px] px-[20px] md:px-[42px] text-center">
+    <GraphicItem/>
+  </div>
+
   <div class="bg-colorSecond py-[50px] md:py-[104px] px-[20px] md:px-[42px] text-center">
     <div class="mb-[16px] md:mb-[24px]">
       <h4 class="text-[32px] md:text-[50px] text-center text-main font-[800]">Visi</h4>
@@ -53,10 +57,6 @@
       <h4 class="text-[32px] md:text-[50px] text-center text-main font-[800]"> MISI</h4>
       <p class="text-[24px] md:text-[40px] text-center text-main max-w-[981px] font-[400] mx-auto">Memotivasi dan membantu mahasiswa ITB untuk mengatasi kendala dalam studinya serta berperan aktif dalam pembinaan watak, kepedulian sosial dan budaya.</p>
     </div>
-  </div>
-
-  <div class="bg-white py-[50px] md:py-[104px] px-[20px] md:px-[42px] text-center">
-    <GraphicItem/>
   </div>
 
   <div class="bg-main pt-[24px] pb-[34px]">
