@@ -55,6 +55,10 @@
     </div>
   </div>
 
+  <div class="bg-white py-[50px] md:py-[104px] px-[20px] md:px-[42px] text-center">
+    <GraphicItem/>
+  </div>
+
   <div class="bg-main pt-[24px] pb-[34px]">
     <h2 class="text-[32px] md:text-[50px] capitalize text-white font-[800] text-center mb-[24px] md:mb-[42px]">Video</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
@@ -80,10 +84,12 @@
 
 <script>
 import HeaderItem from "@/components/header/HeaderItem.vue";
+import GraphicItem from "@/components/item/GraphicItem.vue";
 
 export default {
   components: {
     HeaderItem,
+    GraphicItem
   },
   setup() {
     return {};
