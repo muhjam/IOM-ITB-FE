@@ -2,7 +2,7 @@
 	<Carousel class="mt-[80px]">
 	  <Slide v-for="slide in 4" :key="slide">
 		<div v-if="slide === 1" class="relative h-[30vh] sm:h-[90vh] w-full bg-cover bg-no-repeat">
-		  <video class="absolute inset-0 w-full h-full object-cover" autoplay playsinline>
+		  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted playsinline>
 			<source src="@/assets/video/slide1.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		  </video>
