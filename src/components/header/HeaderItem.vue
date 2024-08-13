@@ -1,7 +1,13 @@
 <template>
 	<Carousel class="mt-[80px]">
 	  <Slide v-for="slide in 4" :key="slide">
-		<div class="relative h-[30vh] sm:h-[90vh] w-full bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${require(`@/assets/image/slide${slide}.png`)})` }"></div>
+		<div v-if="slide === 1" class="relative h-[30vh] sm:h-[90vh] w-full bg-cover bg-no-repeat">
+		  <video class="absolute inset-0 w-full h-full object-cover" autoplay playsinline>
+			<source src="@/assets/video/slide1.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		  </video>
+		</div>
+		<div v-else class="relative h-[30vh] sm:h-[90vh] w-full bg-cover bg-no-repeat" :style="{ backgroundImage: `url(${require(`@/assets/image/slide${slide}.png`)})` }"></div>
 	  </Slide>
   
 	  <template #addons>
@@ -40,6 +46,10 @@
   .carousel__prev,
   .carousel__next {
 	box-sizing: content-box;
+  }
+  
+  video {
+	border: none; /* Optional: Remove border if any */
   }
   </style>
   
