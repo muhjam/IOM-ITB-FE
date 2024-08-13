@@ -23,7 +23,7 @@
   <div class="bg-white p-[16px] md:p-[24px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Kegiatan</h2>
     <div class="flex overflow-x-auto gap-4 snap-x">
-      <div v-for="(v, i) in activity" :key="i" class="min-w-[250px] md:min-w-[300px] bg-main text-white border border-gray-200 rounded-lg shadow snap-center">
+      <div v-for="(v, i) in activities" :key="i" class="min-w-[250px] md:min-w-[300px] bg-main text-white border border-gray-200 rounded-lg shadow snap-center">
         <a href="#">
           <img class="rounded-t-lg h-[200px] w-full object-cover" :src="require(`@/assets/image/${v.image}`)" alt="" />
         </a>
@@ -91,58 +91,17 @@ export default {
     HeaderItem,
     GraphicItem
   },
+  computed:{
+    activities(){
+      return this.$store.getters.activities.reverse();
+    }
+  },
   setup() {
     return {};
   },
   data() {
-    return {
-      activity:[
-      {
-        image: "kegiatan-terkini.png",
-        title: "Kegiatan Terbaru",
-        date: "24 Juli 2024",
-        description: "Sebagaimana layaknya menyambut anggota baru yang hadir dalam keluarga, Ikatan Orangtua Mahasiswa ITB (IOM-ITB) melaksanakan acara Penerimaan Anggota Baru (PAB) yang menjadi bagian dari rangkaian kegiatan Penyambutan Mahasiswa Baru (PMB) ITB 2024.\n\nAcara akan dilaksanakan pada :\nJumat, 26 Juli 2024\n13:30 - 16:00 WIB\nDilaksanakan secara Hybrid Meeting\nONLINE : Link Zoom akan diberikan sehari sebelum waktu pelaksanaan\n\nSelain Upacara Penerimaan, acara ini akan diisi oleh 2 _Talkshow_ :\n💎 KEMAHASISWAAN :\nBERBAGI PERAN DAN SINERGI ANTARA ITB DAN ORANG TUA, bersama\n- Bapak D.Arch .G.P. Adhitama,S.Sn.,M.Sn (Direktur Direktorat Kemahasiswaan ITB)\n- Bapak Prof. Brian Yuliarto., S.T., M.Eng.,Ph.D. (Dekan FTI-ITB, Perwakilan Alumni Beswan IOM-ITB)\n- Bapak Hendro Setyanto, M.Si (Ketua Umum IOM-ITB 2024-2027)\n\n💎 MENYIAPKAN GENERASI EMAS TANPA CEMAS BERSAMA IOM-ITB*,\nbersama Pembicara Utama :\n*Bapak Ir. Arcandra Tahar, M.Sc.,Ph.D.\n\nKedua _Talkshow_ akan dipandu oleh\n- Bapak D.Sc. (Tech) Imam Santoso, S.T. M. Phil (Staff Pengajar FTTM ITB, Penulis, Motivator Pendidikan)\n- Fidella Marwa Huwaida (Presiden Keluarga Mahasiswa ITB periode 2024-2025)\n\nMari bersama kita hadir untuk memaknai penerimaan menjadi bagian dari Keluarga Besar Ikatan Orangtua Mahasiswa ITB (IOM-ITB)",
-        url: "/"
-      },
-      {
-        image: "kegiatan5.png",
-        title: "Donasi Buku IOM-ITB",
-        date: "05 Juni 2024",
-        description: "Selamat Hari Lingkungan Hidup Sedunia!\nBapak/Ibu Orangtua Mahasiswa ITB yang terhormat, yuk ajak Mahasiswa untuk mendonasikan buku-buku kuliahnya\n (Terutama buku TPB) yang sudah tidak terpakai, untuk dapat digunakan lagi oleh Mahasiswa lainnya.\n Dengan mendonasikan buku-buku, selain memperpanjang manfaat buku-buku tersebut dan membantu Mahasiswa lainnya, kita juga berperan untuk mengurangi jumlah pohon yang ditebang untuk pembuatan kertas.\n Untuk drop point, informasi donasi dan juga mendapatkan buku yang dibutuhkan silakan hubungi kami:\n- Whatsapp: 0856-2465-4990\n- Student Center Timur ITB Lantai 2\n- Jl. Ganesha 10, Bandung",
-        url: "/"
-      },
-      {
-        image: "kegiatan4.png",
-        title: "DIKPUS 2024 untuk Mahasiswa ITB 2023",
-        date: "25 Juni 2024",
-        description: "Menjadi Mahasiswa salah satunya adalah membuka kesempatan untuk berjejaring. \n\nDan mengikuti serta aktif di Organisasi Kemahasiswaan adalah langkah awal yang baik untuk memperluas",
-        url: "/"
-      },
-      {
-        image: "kegiatan3.png",
-        title: "Webinar Spesialisasi Kriya di FSRD ITB",
-        date: "01 Juli 2024",
-        description: "Halo para mahasiswa baru FSRD, atau siswa SMA yang akan kuliah di FSRD dan juga para orang tua yang putra/putrinya kuliah/akan kuliah di FSRD\n\nIngin tau lebih banyak tentang Spesialisasi Kriya di FSRD ITB?",
-        url: "/",
-      },
-      {
-        image: "kegiatan2.png",
-        title: "Pertemuan antara Pengurus Baru dan Mantan Pengurus IOM-ITB di Ruang",
-        date: "10 Juni 2024",
-        description: "Rektor ITB Prof. Reini Wirahadikusumah, Ph. D. (ke-4 kiri) didampingi Sekretaris Institut Prof. Dr. Ing. Ir. Widjaja Martokusumo (ke-2 kiri) dan Direktur Direktorat Kemahasiswaan",
-        url: "/"
-      },
-      {
-        image: "kegiatan1.png",
-        title: "Selamat Ulang Tahun IOM-ITB yang ke-56!" ,
-        date: "24 Juli 2024",
-        description: "Selamat pagi, selamat berakhir pekan.\nDengan penuh rasa syukur, hari ini tanggal 14 Juli 2024, IOM-ITB genap berusia 56 tahun sejak pertama kali didirikan pada tanggal 14 Juli 1968.",
-        url: "/"
-      },
-    ]
-    };
+    return {};
   },
-  computed: {},
   methods: {
     truncateText(text, maxLength) {
       if (text && text.length > maxLength) {
