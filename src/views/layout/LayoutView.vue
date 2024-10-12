@@ -13,7 +13,7 @@
 import NavbarItem from "@/components/navbar/NavbarItem.vue";
 import FooterItem from "@/components/footer/FooterItem.vue";
 import ButtonItem from "@/components/button/ButtonItem.vue";
-import { GET_USER } from "@/store/auth.module";
+// import { GET_USER } from "@/store/auth.module";
 
 export default {
   name: "LayoutDashboard",
@@ -31,7 +31,7 @@ export default {
     },
   },
   async beforeMount() {
-    await this.getData();
+    // await this.getData();
     // this.$store.dispatch(GET_USER)
   },
   methods: {
@@ -44,7 +44,7 @@ export default {
         // await this.$store.dispatch(GET_USER);
         // this.isLoading = false;
       }, 100);
-      await this.$store.dispatch(GET_USER);
+      // await this.$store.dispatch(GET_USER);
     },
   },
 };

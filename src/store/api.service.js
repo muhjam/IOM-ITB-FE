@@ -9,20 +9,7 @@ const ApiService = {
     // Inisialisasi instance axios untuk API pertama
     this.api1 = wrapper(
       axios.create({
-        baseURL: config.value("DEVCODE_API_URL"),
-      }),
-    );
-
-    // Inisialisasi instance axios untuk API kedua
-    this.api2 = wrapper(
-      axios.create({
-        baseURL: config.value("DEVCODE_GETHIRED_API"),
-      }),
-    );
-
-    this.api3 = wrapper(
-      axios.create({
-        baseURL: config.value("GETHIRED_WEB_URL"),
+        baseURL: config.value("API_URL"),
       }),
     );
 
@@ -69,15 +56,11 @@ const ApiService = {
   },
 
   post(resource, params) {
-    return this.api1.post(`${resource}`, params);
-  },
-
-  getJob(resource, params) {
-    return this.api2.get(resource, { params });
-  },
-
-  getForm(resource, params) {
-    return this.api3.get(resource, { params });
+    return this.api1.post(`${resource}`, params, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   },
 
   upload(resource, params) {
@@ -91,11 +74,19 @@ const ApiService = {
   },
 
   update(resource, slug, params) {
-    return this.api1.put(`${resource}/${slug}`, params);
+    return this.api1.put(`${resource}/${slug}`, params, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   },
 
   put(resource, params) {
-    return this.api1.put(`${resource}`, params);
+    return this.api1.put(`${resource}`, params, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
   },
 
   patch(resource, params) {

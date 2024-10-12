@@ -14,6 +14,24 @@ const routes = [
         meta: { haveAuthenticated: true },
       },
       {
+        path: "/store",
+        name: "Store",
+        component: () => import("@/views/pages/StoreView.vue"),
+        meta: { haveAuthenticated: false },
+      },
+      {
+        path: "/store/:id",
+        name: "Store Detail",
+        component: () => import("@/views/pages/StoreDetail.vue"),
+        meta: { haveAuthenticated: false },
+      },
+      {
+        path: "/transaction",
+        name: "Transaction",
+        component: () => import("@/views/pages/TransactionView.vue"),
+        meta: { haveAuthenticated: false },
+      },
+      {
         path: "/tentang-kami",
         name: "About",
         component: () => import("@/views/pages/AboutView.vue"),
@@ -71,11 +89,11 @@ const router = createRouter({
 // Navigation guard to protect routes
 router.beforeEach(async (to, from, next) => {
   try {
-    if (to?.query?.token) {
-      await store.dispatch(FETCH_JWT, to.query.token);
-    } else {
-      const jwtResult = await store.dispatch(FETCH_JWT);
-    }
+    // if (to?.query?.token) {
+    //   await store.dispatch(FETCH_JWT, to.query.token);
+    // } else {
+    //   const jwtResult = await store.dispatch(FETCH_JWT);
+    // }
   } catch (e) {
     console.log(e);
   }

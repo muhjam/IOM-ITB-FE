@@ -1,6 +1,8 @@
 import { createStore } from "vuex";
 import auth from "./auth.module";
 import activity from "./activity.module";
+import merchandise from "./merchandise.module";
+import transaction from "./transaction.module";
 
 export default createStore({
   state() {
@@ -16,6 +18,8 @@ export default createStore({
   },
   modules: {
     auth,
-    activity
+    activity,
+    merchandise,
+    transaction
   },
 });
