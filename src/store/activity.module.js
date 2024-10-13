@@ -60,6 +60,13 @@ const state = {
         description: "Terima kasih. Satu ucapan untuk semua uluran tangan dari semua teman-teman IOM-ITB. Untuk para anggota yang membayarkan iurannya, untuk para donatur yang memberikan sumbangannya dan untuk para Pengurus yang melaksanakan semua tahapan hingga dana yang kita kumpulkan dapat tersalurkan melalui Bantuan Biaya IOM-ITB:\n• Bantuan Biaya UKT untuk 39 orang\n• Bantuan Biaya Hidup untuk 19 orang\n• Bantuan Biaya Tugas Akhir 1 orang\nTotal jumlah bantuan tersalurkan : Rp 268.000.000 (Dua ratus enam puluh delapan juta rupiah)\n...\nSetiap rupiah dan setiap tetes peluh yang kita berikan telah berperan dalam mengiring langkah para Mahasiswa ITB menggapai cita-cita mulia mereka.\n...\nPerjuangan kita belum selesai, masih ada daftar panjang dari para Mahasiswa yang berharap untuk tidak mengubur mimpi mereka sekarang.\nSilakan sampaikan kontribusi kita ke Rekening IOM-ITB di bawah ini:\nBank Mandiri / 130-001-900-0366 / IOM-ITB\nBank BNI / 0028668954 / IOM-ITB\n*\nWEBSITE www.iom-itb.id\nINSTAGRAM https://www.instagram.com/iom_itb\nWA CHANNEL https://bit.ly/iomitbwachannel",
         url: "https://kemahasiswaan.itb.ac.id/beranda/read/pengumuman/2347/penerima-bantuan-ikatan-orangtua-mahasiswa-itb-2024"
       },
+      {
+        image: "info.png",
+        title: "INFO PENTING Pengurus",
+        date: "13 Oktober 2024",
+        description: "Pengurus ITB GANESHA\n\nPAK ABAN \n\nKepala Seksi Keamanan & Ketertiban ( K3L ITB GANESHA )\n+62 813-2000-6576\n\nPos KEAMANAN 24 JAM ITB GANESHA\n( 022 ) 2500204\n\nPAK TARYONO\nLAYANAN DARURAT ITB GANESHA\n\nPengurus ITB JATINANGOR\n\nBAMBANG  SUTOYO \nBagian KEMAHASISWAAN ITB JATINANGOR \n+62 895-3706-78392\n\nRIDWAN MUSLIM Pengurus KEMAHASISWAAN ITB JATINANGOR \n+62 896-6727-5919\n\nAMBULANCE  ITB JATINANGOR ( 24 JAM STANBY)\n\n1.⁠ ⁠Afif ( K3L ITB Jatinangor) \n        081314967460\n\n2.⁠ ⁠Cahyadi ( K3L DKIJ ) \n        081224176916\n\n3.⁠ ⁠Dayat (K3L ITB Jatinangor)\n        081910046144\n\nPusat Kesehatan yg bekerja sama dgn ITB JATINANGOR :\n\n1.⁠ ⁠Klinik Kesehatan Unpad \n       Telp. (022) 7797432\n\n2.⁠ ⁠Puskesmas Jatinangor\n        Telp. (022) 7796143\n\nPengurus ITB CIREBON\n\nIBU ARMINA ( NINA )\nKabid UPT YANKES ITB CIREBON\n+62 811-209-223",
+        url: "/kegiatan"
+      },
   ],
 };
 

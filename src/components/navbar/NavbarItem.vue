@@ -1,9 +1,7 @@
 <template>
 <nav class="fixed top-0 left-0 right-0 bg-white shadow-lg px-4 py-3 z-50">
-  <transition name="slide">
       <ul
-        v-if="isMenuOpen"
-        class="xl:hidden fixed top-0 left-0 mr-10 z-10 w-[250px] sm:w-[400px] h-[100vh] bg-white shadow-lg"
+        :class="`xl:hidden fixed top-0 left-0 mr-10 z-10 h-[100vh] bg-white shadow-lg duration-300 overflow-hidden  ${isMenuOpen ? 'w-[250px] sm:w-[400px]' : 'w-[0]'} `"
       >
         <li class="py-2">
           <a
@@ -42,7 +40,6 @@
           >Donasi</a>
         </li>
       </ul>
-    </transition>
   <div class="container mx-auto flex items-center justify-between">
     <a class="text-main font-[700] flex items-center" href="/">
       <img :src="require('@/assets/image/logo.png')" alt="IOM ITB Logo" class="w-14 xl:w-16 h-auto mr-3">
