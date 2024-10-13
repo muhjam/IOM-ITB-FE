@@ -62,7 +62,7 @@ const state = {
       },
       {
         image: "info.png",
-        title: "INFO PENTING Pengurus",
+        title: "INFO PENTING",
         date: "13 Oktober 2024",
         description: "Pengurus ITB GANESHA\n\nPAK ABAN \n\nKepala Seksi Keamanan & Ketertiban ( K3L ITB GANESHA )\n+62 813-2000-6576\n\nPos KEAMANAN 24 JAM ITB GANESHA\n( 022 ) 2500204\n\nPAK TARYONO\nLAYANAN DARURAT ITB GANESHA\n\nPengurus ITB JATINANGOR\n\nBAMBANG  SUTOYO \nBagian KEMAHASISWAAN ITB JATINANGOR \n+62 895-3706-78392\n\nRIDWAN MUSLIM Pengurus KEMAHASISWAAN ITB JATINANGOR \n+62 896-6727-5919\n\nAMBULANCE  ITB JATINANGOR ( 24 JAM STANBY)\n\n1.⁠ ⁠Afif ( K3L ITB Jatinangor) \n        081314967460\n\n2.⁠ ⁠Cahyadi ( K3L DKIJ ) \n        081224176916\n\n3.⁠ ⁠Dayat (K3L ITB Jatinangor)\n        081910046144\n\nPusat Kesehatan yg bekerja sama dgn ITB JATINANGOR :\n\n1.⁠ ⁠Klinik Kesehatan Unpad \n       Telp. (022) 7797432\n\n2.⁠ ⁠Puskesmas Jatinangor\n        Telp. (022) 7796143\n\nPengurus ITB CIREBON\n\nIBU ARMINA ( NINA )\nKabid UPT YANKES ITB CIREBON\n+62 811-209-223",
         url: "/kegiatan"
