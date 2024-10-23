@@ -22,26 +22,7 @@
 
   <div class="bg-white p-[16px] md:p-[24px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Kegiatan</h2>
-    <div class="flex overflow-x-auto gap-4 snap-x">
-      <div v-for="(v, i) in activities" :key="i" class="min-w-[250px] md:min-w-[300px] bg-main text-white border border-gray-200 rounded-lg shadow snap-center">
-        <a href="#">
-          <img class="rounded-t-lg h-[200px] w-full object-cover" :src="require(`@/assets/image/${v.image}`)" alt="" />
-        </a>
-        <div class="p-5">
-          <a href="#">
-            <h5 class="text-xl md:text-2xl font-bold tracking-tight text-white">{{ truncateText(v.title, 20) }}</h5>
-          </a>
-          <span class="text-[14px] font-[600] text-white">{{ v.date }}</span>
-          <p class="mb-3 text-[14px] mt-2 text-white">{{ truncateText(v.description, 200) }}</p>
-          <a :href="v.url" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-main bg-white rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
-            Baca Selengkapnya
-            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
+    <ActivitiesItem />
   </div>
 
   <div class="bg-white py-[50px] md:py-[104px] px-[20px] md:px-[42px] text-center">
@@ -83,18 +64,22 @@
 </template>
 
 <script>
+import { GET_ACTIVITIES } from "@/store/activity.module";
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import GraphicItem from "@/components/item/GraphicItem.vue";
+import ActivitiesItem from "@/components/card/ActivitiesItem.vue";
 
 export default {
   components: {
     HeaderItem,
-    GraphicItem
+    GraphicItem,
+    ActivitiesItem
   },
   computed:{
     activities(){
-      return this.$store.getters.activities.reverse();
-    }
+      // Create a new reversed array without mutating the original
+      return this.$store.getters.activities;
+    },
   },
   setup() {
     return {};
@@ -102,7 +87,19 @@ export default {
   data() {
     return {};
   },
+  mounted(){
+    this.getData()
+  },
   methods: {
+    async getData() {
+      try {
+        await this.$store.dispatch(GET_ACTIVITIES, {
+          query: "",
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    },
     truncateText(text, maxLength) {
       if (text && text.length > maxLength) {
         return text.slice(0, maxLength) + "...";
