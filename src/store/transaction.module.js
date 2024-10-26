@@ -25,7 +25,7 @@ const getters = {
 const actions = {
     [GET_TRANSACTIONS](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.get("/transaction/list", params.data)
+            ApiService.get("/transactions", params.data)
                 .then(response => {
                     const { data } = response;
                     context.commit(SET_TRANSACTIONS, data);
@@ -39,7 +39,7 @@ const actions = {
     },
     [GET_TRANSACTION_DETAIL](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.get(`/transaction?q=${params.code}`, params.data)
+            ApiService.get(`/transactions?q=${params.code}`, params.data)
                 .then(response => {
                     const { data } = response;
                     context.commit(SET_TRANSACTION_DETAIL, data);
@@ -53,7 +53,7 @@ const actions = {
     },
     [POST_TRANSACTION](context, params){
         return new Promise((resolve, reject) => {
-            ApiService.post("/transaction/create", params.data)
+            ApiService.post("/transactions", params.data)
                 .then(({ data }) => {
                     resolve(data);
                 })
@@ -64,7 +64,7 @@ const actions = {
     },
     [PUT_TRANSACTION](context, params){
         return new Promise((resolve, reject) => {
-            ApiService.put(`/transaction/update/${params.id}`, params.data)
+            ApiService.put(`/transactions/${params.id}`, params.data)
                 .then(({ data }) => {
                     resolve(data);
                 })
@@ -75,7 +75,7 @@ const actions = {
     },
     [DELETE_TRANSACTION](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.delete(`/transaction/delete/${params.id}`)
+            ApiService.delete(`/transactions/${params.id}`)
                 .then(() => {
                     resolve(); // Optionally handle success response
                 })

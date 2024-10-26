@@ -23,7 +23,7 @@ const getters = {
 const actions = {
     [GET_ACTIVITIES](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.get("/activity/list", params)
+            ApiService.get("/activities", params)
                 .then(response => {
                     const { data } = response;
                     context.commit(SET_ACTIVITIES, data);
@@ -37,7 +37,7 @@ const actions = {
     },
     [POST_ACTIVITY](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.post("/activity/create", params.data)
+            ApiService.post("/activities", params.data)
                 .then(response => {
                     const { data } = response;
                     resolve(data);
@@ -50,7 +50,7 @@ const actions = {
     },
     [PUT_ACTIVITY](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.put(`/activity/update/${params.id}`, params.data)
+            ApiService.put(`/activities/${params.id}`, params.data)
                 .then(response => {
                     const { data } = response;
                     resolve(data);
@@ -63,7 +63,7 @@ const actions = {
     },
     [DELETE_ACTIVITY](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.delete(`/activity/delete/${params.id}`)
+            ApiService.delete(`/activities/${params.id}`)
                 .then(() => {
                     resolve();
                 })

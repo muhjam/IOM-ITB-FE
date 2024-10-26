@@ -25,7 +25,7 @@ const getters = {
 const actions = {
     [GET_MERCHANDISES](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.get("/merchandise/list", params.data)
+            ApiService.get("/merchandises", params.data)
                 .then(response => {
                     const { data } = response;
                     context.commit(SET_MERCHANDISES, data);
@@ -39,7 +39,7 @@ const actions = {
     },
     [GET_MERCHANDISE_DETAIL](context, params) {
         return new Promise((resolve, reject) => {
-            ApiService.get(`/merchandise/${params.id}`, params.data)
+            ApiService.get(`/merchandises/${params.id}`, params.data)
                 .then(response => {
                     const { data } = response;
                     context.commit(SET_MERCHANDISE_DETAIL, data);
@@ -53,7 +53,7 @@ const actions = {
     },
     [POST_MERCHANDISE](context, params){
         return new Promise((resolve, reject) => {
-          ApiService.post("/merchandise/create", params.data)
+          ApiService.post("/merchandises", params.data)
             .then(async ({ data }) => {
               resolve(data);
             })
@@ -64,7 +64,7 @@ const actions = {
       },
     [PUT_MERCHANDISE](context, params){
         return new Promise((resolve, reject) => {
-          ApiService.put(`/merchandise/update/${params.id}`, params.data)
+          ApiService.put(`/merchandises/${params.id}`, params.data)
             .then(async ({ data }) => {
               resolve(data);
             })
@@ -75,7 +75,7 @@ const actions = {
       },
       [DELETE_MERCHANDISE](context, params) {
         return new Promise((resolve, reject) => {
-          ApiService.delete(`merchandise/delete/${params.id}`).catch((err) => {
+          ApiService.delete(`merchandise/${params.id}`).catch((err) => {
             reject(err);
           });
         });
