@@ -11,32 +11,32 @@
         </li>
         <li class="mr-4">
           <a
-            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/tentang-kami' ? 'font-[800]' : 'font-[500]'}`"
-            href="/tentang-kami"
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/about' ? 'font-[800]' : 'font-[500]'}`"
+            href="/about"
           >Tentang Kami</a>
         </li>
         <li class="py-2">
           <a
-            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/kegiatan' ? 'font-[800]' : 'font-[500]'}`"
-            href="/kegiatan"
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/activity' ? 'font-[800]' : 'font-[500]'}`"
+            href="/activity"
           >Kegiatan</a>
         </li>
         <li class="py-2">
           <a
-            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/daftar' ? 'font-[800]' : 'font-[500]'}`"
-            href="/daftar"
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/register' ? 'font-[800]' : 'font-[500]'}`"
+            href="/register"
           >Pendaftaran Anggota</a>
         </li>
         <li class="py-2">
           <a
-            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/pengajuan-bantuan' ? 'font-[800]' : 'font-[500]'}`"
-            href="/pengajuan-bantuan"
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/support-request' ? 'font-[800]' : 'font-[500]'}`"
+            href="/support-request"
           >Pengajuan Bantuan</a>
         </li>
         <li class="py-2">
           <a
-            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/donasi' ? 'font-[800]' : 'font-[500]'}`"
-            href="/donasi"
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/donation' ? 'font-[800]' : 'font-[500]'}`"
+            href="/donation"
           >Donasi</a>
         </li>
       </ul>
@@ -57,19 +57,19 @@
           <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/">Beranda</a>
         </li>
         <li class="nav-item">
-          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/tentang-kami' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/tentang-kami">Tentang Kami</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/about' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/about">Tentang Kami</a>
         </li>
         <li class="nav-item">
-          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/kegiatan' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/kegiatan">Kegiatan</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/activity' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/activity">Kegiatan</a>
         </li>
         <li class="nav-item">
-          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/daftar' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/daftar">Pendaftaran Anggota</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/register' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/register">Pendaftaran Anggota</a>
         </li>
         <li class="nav-item">
-          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/pengajuan-bantuan' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/pengajuan-bantuan">Pengajuan Bantuan</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/support-request' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/support-request">Pengajuan Bantuan</a>
         </li>
         <li class="nav-item">
-          <a :class="`text-white hover:opacity-80 px-[50px] py-[13px] bg-main rounded-full`" aria-current="page" href="/donasi">Donasi</a>
+          <a :class="`text-white hover:opacity-80 px-[50px] py-[13px] bg-main rounded-full`" aria-current="page" href="/donation">Donasi</a>
         </li>
       </ul>
     </div>
