@@ -14,6 +14,12 @@ const routes = [
         meta: { haveAuthenticated: true },
       },
       {
+        path: "/policy",
+        name: "Policy",
+        component: () => import("@/views/pages/PolicyView.vue"),
+        meta: { haveAuthenticated: false },
+      },
+      {
         path: "/store",
         name: "Store",
         component: () => import("@/views/pages/StoreView.vue"),
