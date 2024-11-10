@@ -62,6 +62,12 @@ const routes = [
         meta: { haveAuthenticated: true },
       },
       {
+        path: "/donation",
+        name: "Donation",
+        component: () => import("@/views/pages/DonationView.vue"),
+        meta: { haveAuthenticated: true },
+      },
+      {
         path: "/pengajuan-bantuan",
         name: "Submission",
         component: () => import("@/views/pages/SubmissionView.vue"),
