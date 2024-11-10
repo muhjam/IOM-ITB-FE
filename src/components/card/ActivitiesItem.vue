@@ -22,7 +22,7 @@
   </template>
   
   <script>
-  import { GET_ACTIVITIES } from "@/store/activity.module";
+  import { GET_ACTIVITIES } from "@/store/kegiatan.module";
   import HeaderItem from "@/components/header/HeaderItem.vue";
   
   export default {
