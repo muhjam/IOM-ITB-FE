@@ -2,7 +2,7 @@
    <div class="flex overflow-x-auto gap-4 snap-x h-full">
       <div v-for="(v, i) in activities" :key="i" class="max-w-[250px] min-w-[250px] md:min-w-[300px] md:max-w-[300px] bg-main text-white border border-gray-200 rounded-lg shadow snap-center flex flex-col justify-between">
         <a :href="v?.url">
-          <img class="rounded-t-lg h-[200px] w-full object-cover" :src="v?.image" alt="" />
+          <img class="rounded-t-lg h-[200px] w-full object-cover" :src="getImageBase64(v?.image?.data)" alt="" />
         </a>
         <div class="p-5">
           <a :href="v?.url">
@@ -45,6 +45,12 @@
     },
 
     methods: {
+      getImageBase64 (buffer) {
+      const byteArray = new Uint8Array(buffer);
+      let binary = '';
+      byteArray.forEach((byte) => binary += String.fromCharCode(byte));
+      return `data:image/jpeg;base64,${btoa(binary)}`;
+    },
       truncateText(text, maxLength) {
         if (text && text.length > maxLength) {
           return text.slice(0, maxLength) + "...";

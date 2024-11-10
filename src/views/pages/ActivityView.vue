@@ -15,7 +15,7 @@
             Baca Selengkapnya
           </a>
       </div>
-      <img :src="activities[0]?.image" alt="IOM-ITB" class="w-full md:w-1/2 md:h-1/2 px-4 md:px-20 hidden md:block">
+      <img :src="getImageBase64(activities[0]?.image?.data)" alt="IOM-ITB" class="w-full md:w-1/2 md:h-1/2 px-4 md:px-20 hidden md:block">
     </div>
   </div>
 
@@ -61,6 +61,12 @@ export default {
       } catch (err) {
         console.error(err);
       }
+    },
+   getImageBase64 (buffer) {
+      const byteArray = new Uint8Array(buffer);
+      let binary = '';
+      byteArray.forEach((byte) => binary += String.fromCharCode(byte));
+      return `data:image/jpeg;base64,${btoa(binary)}`;
     },
     truncateText(text, maxLength) {
       if (text && text.length > maxLength) {
