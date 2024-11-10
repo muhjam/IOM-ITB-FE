@@ -40,7 +40,7 @@ const routes = [
       {
         path: "/tentang-kami",
         name: "About",
-        component: () => import("@/views/pages/tentang-kamiView.vue"),
+        component: () => import("@/views/pages/AboutView.vue"),
         meta: { haveAuthenticated: true },
       },
       {
@@ -52,13 +52,13 @@ const routes = [
       {
         path: "/kegiatan",
         name: "Activity",
-        component: () => import("@/views/pages/kegiatanView.vue"),
+        component: () => import("@/views/pages/ActivityView.vue"),
         meta: { haveAuthenticated: true },
       },
       {
         path: "/donasi",
         name: "Donation",
-        component: () => import("@/views/pages/donasiView.vue"),
+        component: () => import("@/views/pages/DonationView.vue"),
         meta: { haveAuthenticated: true },
       },
       {

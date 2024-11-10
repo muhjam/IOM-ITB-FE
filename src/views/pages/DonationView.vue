@@ -15,7 +15,7 @@
           Donasi Sekarang
         </button>
       </div>
-      <img :src="require('@/assets/image/donasi-header.png')" alt="Donation" class="w-full md:w-1/2 p-4 md:p-20 hidden md:block">
+      <img :src="require('@/assets/image/donation-header.png')" alt="Donation" class="w-full md:w-1/2 p-4 md:p-20 hidden md:block">
     </div>
   </div>
 
