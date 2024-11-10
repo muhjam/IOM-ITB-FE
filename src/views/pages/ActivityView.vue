@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { GET_ACTIVITIES } from "@/store/kegiatan.module";
+import { GET_ACTIVITIES } from "@/store/activity.module";
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import ActivitiesItem from "@/components/card/ActivitiesItem.vue";
 

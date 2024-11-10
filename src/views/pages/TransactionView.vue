@@ -110,7 +110,7 @@ export default {
     },
     async submitSearch() {
       try {
-        window.location.href = `/transaction?q=${this.search}`;
+        window.location.href = `/transaksi?q=${this.search}`;
       } catch (error) {
         console.error("Transaction failed:", error);
       }
