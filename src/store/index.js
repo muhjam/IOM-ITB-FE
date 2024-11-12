@@ -3,6 +3,7 @@ import auth from "./auth.module";
 import activity from "./activity.module";
 import merchandise from "./merchandise.module";
 import transaction from "./transaction.module";
+import member from "./member.module";
 
 export default createStore({
   state() {
@@ -20,6 +21,7 @@ export default createStore({
     auth,
     activity,
     merchandise,
-    transaction
+    transaction,
+    member
   },
 });

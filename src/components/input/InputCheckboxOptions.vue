@@ -35,7 +35,6 @@
         required: true
       }
     },
-    emits: ['update'],
     data() {
       return {
         checked: this.value

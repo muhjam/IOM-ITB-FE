@@ -174,6 +174,7 @@ export default {
 
         // Set the uploaded file
         this.file = incomingFiles;
+        this.$emit('update', { key: this.keyValue || this.label, value: incomingFiles[0] }); 
       },
       isValidFile(files) {
         // Check if the file matches the accepted formats

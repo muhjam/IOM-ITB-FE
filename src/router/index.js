@@ -45,8 +45,8 @@ const routes = [
       },
       {
         path: "/pendaftaran-anggota",
-        name: "Register",
-        component: () => import("@/views/pages/RegisterView.vue"),
+        name: "Fromulir",
+        component: () => import("@/views/pages/FormView.vue"),
         meta: { haveAuthenticated: true },
       },
       {

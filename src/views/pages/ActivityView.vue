@@ -15,7 +15,7 @@
             Baca Selengkapnya
           </a>
       </div>
-      <img :src="getImageBase64(activities[0]?.image?.data)" alt="IOM-ITB" class="w-full md:w-1/2 md:h-1/2 px-4 md:px-20 hidden md:block">
+      <img :src="activities[0]?.image" alt="IOM-ITB" class="w-full md:w-1/2 md:h-1/2 px-4 md:px-20 hidden md:block">
     </div>
   </div>
 
