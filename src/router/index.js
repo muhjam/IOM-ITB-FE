@@ -69,7 +69,7 @@ const routes = [
       },
       {
         path: "/donasi",
-        name: "Donation",
+        name: "Donasi",
         component: () => import("@/views/pages/DonationView.vue"),
         meta: { haveAuthenticated: true },
       },

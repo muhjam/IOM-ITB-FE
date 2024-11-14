@@ -1,19 +1,24 @@
 <template>
   <div class="relative mt-2 rounded-md shadow-sm">
-    <label class="text-sm capitalize">{{ label.replace(/_/g, " ") }}</label>
+    <label class="text-sm capitalize font-[600]">{{ label.replace(/_/g, " ") }} <RequiredItem v-if="required"/></label>
     <textarea
       v-model="inputValue"
       id="message"
       rows="4"
       class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-      placeholder="Write your thoughts here..."
+      :placeholder="placeholder"
       @input="updateValue"
     ></textarea>
   </div>
 </template>
 
 <script>
+import RequiredItem from "@/components/input/helper-input/RequiredItem.vue";
+
 export default {
+  components: {
+        RequiredItem,
+  },
   props: {
     keyValue: {
       type: String,
@@ -27,7 +32,17 @@ export default {
       type: String,
       required: false,
       default: ''
-    }
+    },
+    placeholder: {
+      type: String,
+      required: false,
+      default: ''
+    },
+    required: {
+      type: Boolean,
+      required: false,
+      default: ''
+    },
   },
   emits: ['update'],
   data() {

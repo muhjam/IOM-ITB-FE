@@ -1,25 +1,23 @@
 <template>
   <div class="bg-white w-full md:w-[80%] shadow-sm p-4 md:p-6 rounded-md mx-auto">
-    <h1 class="text-[24px] md:text-[42px] font-[700] text-center md:text-left">Daftar Anggota Baru</h1>
+    <h1 class="text-[24px] md:text-[42px] font-[700] text-center md:text-left">Pengajuan Bantuan</h1>
     <div class="mt-4">
-      <img :src="require('@/assets/image/banner-register.png')" title="Banner IOM" class="w-full h-auto object-cover"/>
+      <!-- <img :src="require('@/assets/image/banner-register.png')" title="Banner IOM" class="w-full h-auto object-cover"/> -->
     </div>
     <form @submit.prevent="handleSubmit" class="mt-6">
       <div class="flex flex-col md:flex-row md:justify-between gap-4">
-        <InputText keyValue="parentName" label="Nama Orang Tua / Wali" class="w-full md:w-1/2" :required="true" @update="updateValue" />
+        <InputText keyValue="name" label="Nama" class="w-full md:w-1/2" :required="true" @update="updateValue" />
         <InputText keyValue="noWhatsapp" label="No Whatsapp" class="w-full md:w-1/2" :required="true" @update="updateValue" />
       </div>
       <div class="flex flex-col md:flex-row md:justify-between gap-4 mt-4">
-        <InputText keyValue="childNim" label="NIM Anak" class="w-full md:w-1/2" :required="true" @update="updateValue" />
+        <InputText keyValue="nim" label="NIM" class="w-full md:w-1/2" :required="true" @update="updateValue" />
+        <InputSelection keyValue="type" label="Jenis Bantuan" class="w-full md:w-1/2" :required="true" @update="updateValue" :options="['Biaya UKT', 'Biaya Hidup', 'Biaya Tugas Akhir', 'Biaya Kesehatan (Bagi yang membutuhkan dan bersifat darurat)', 'Bantuan Lainnya']" placeholder="Pilih Jenis Bantuan" />
       </div>
       <div class="flex flex-col md:flex-row md:justify-between gap-4 mt-4">
-        <InputCheckboxOptions keyValue="staff" label="Bersedia menjadi Pengurus IOM?" class="w-full md:w-1/2" :required="true" :options="['Bersedia']" @update="updateValue" />
-      </div>
-      <div class="flex flex-col md:flex-row md:justify-between gap-4 mt-4">
-        <InputCheckboxOptions keyValue="foster" label="Bersedia menjadi Orang Tua Asuh?" class="w-full md:w-1/2" :required="true" :options="['Bersedia']" @update="updateValue" />
+        <InputTextarea keyValue="staff" label="Alasan kenapa memerlukan bantuan?" class="w-full" :required="true" :options="['Bersedia']" @update="updateValue" />
       </div>
       <div class="flex flex-col gap-4 mt-4">
-        <InputFile keyValue="file" label="Upload Scan PDF Surat Pernyataan Ketersediaan Menjadi Orang Tua Asuh" subLabel="Download template [disini](https://docs.google.com/document/u/1/export?format=docx&id=1yNNx0t2hfm2mDpaVjMPRH-MOpnKtrIzA9PYnwxmewgM&token=AC4w5VikJY28576IyLc9CmsUssgm4S-ySA%3A1723506902118&includes_info_params=true&usp=docs_home&cros_files=false&inspectorResult=%7B%22pc%22%3A1%2C%22lplc%22%3A31%7D)." format="all" class="w-full" :required="true" @update="updateValue" />
+        <InputFile keyValue="file" label="Upload Berkas (Proposal Ajuan)" subLabel="" format="all" class="w-full" :required="true" @update="updateValue" />
       </div>
       <!-- Submit and Cancel Buttons -->
       <div class="flex flex-col-reverse md:flex-row justify-end gap-4 mt-6">
@@ -37,6 +35,8 @@
   
 <script>
 import InputText from "@/components/input/InputText.vue";
+import InputTextarea from "@/components/input/InputTextarea.vue";
+import InputSelection from "@/components/input/InputSelection.vue";
 import InputCheckboxOptions from "@/components/input/InputCheckboxOptions.vue";
 import InputFile from "@/components/input/InputFile.vue";
 import { useStore } from 'vuex';
@@ -47,6 +47,8 @@ export default {
     InputText,
     InputCheckboxOptions,
     InputFile,
+    InputSelection,
+    InputTextarea
   },
   props: {
     id: {

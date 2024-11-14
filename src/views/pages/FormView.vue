@@ -13,7 +13,8 @@
   export default {
     components: {
         FormRegister,
-        FormHelp
+        FormHelp,
+        Container
     },
     setup() {
       return {};

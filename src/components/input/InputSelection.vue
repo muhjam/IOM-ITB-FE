@@ -1,6 +1,6 @@
 <template>
     <div class="relative mt-2 rounded-md shadow-sm">
-      <label class="text-sm capitalize">{{ label.replace(/_/g, " ") }}</label>
+      <label class="text-sm capitalize font-[600]">{{ label.replace(/_/g, " ") }} <RequiredItem v-if="required"/></label>
       <select 
         id="countries" 
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" 
@@ -13,7 +13,12 @@
   </template>
   
   <script>
+  import RequiredItem from "@/components/input/helper-input/RequiredItem.vue";
+
   export default {
+    components: {
+        RequiredItem,
+    },
     props: {
       keyValue: {
         type: String,
@@ -32,6 +37,10 @@
         type: Array,
         required: false,
         default: () => []
+      },
+      required: {
+        type: Boolean,
+        required: false
       }
     },
     emits: ['update'],
