@@ -1,15 +1,19 @@
 <template>
-    <div class="pt-[100px] pb-[32px] px-[18px] md:px-[70px]">
-     <FormRegister/>
-    </div>
+     <Container>
+      <FormRegister v-if="pathPage == '/form1'" />
+      <FormHelp v-else-if="pathPage == '/form2'" />
+    </Container>
   </template>
   
   <script>
   import FormRegister from "@/components/form/FormRegister.vue";
+  import FormHelp from "@/components/form/FormHelp.vue";
+  import Container from "@/components/ContainerItem.vue";
   
   export default {
     components: {
         FormRegister,
+        FormHelp
     },
     setup() {
       return {};
@@ -18,7 +22,11 @@
       return {
       };
     },
-    computed: {},
+    computed: {
+    pathPage() {
+      return this.$route.path;
+    }
+  },
     methods: {}
   };
   </script>

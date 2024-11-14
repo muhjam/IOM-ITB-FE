@@ -32,9 +32,9 @@
     >
       <div class="mt-1 w-full h-[120px] border border-gray-400 border-dashed rounded-[8px] flex justify-center items-center">
         <div class="text-center">
-          <p class="text-gray-600 text-[14px] flex items-center gap-2 font-[600]">
+          <p class="text-gray-600 text-[14px] flex items-center gap-2 font-[600] justify-center">
             <img :src="require('@/assets/icon/upload.svg')" alt="icon" class="rounded-lg w-[14px] h-auto" />
-            {{ labelText }}
+            Upload {{ labelText }}
           </p>
           <p class="text-gray-600 text-[11px]">Accepts {{ acceptedFormatsText }} files</p>
           <p class="text-gray-600 text-[11px]">Size limit: 5 MB</p>
