@@ -62,6 +62,12 @@ const routes = [
         meta: { haveAuthenticated: true },
       },
       {
+        path: "/form3",
+        name: "Donasi test",
+        component: () => import("@/views/pages/FormView.vue"),
+        meta: { haveAuthenticated: true },
+      },
+      {
         path: "/kegiatan",
         name: "Activity",
         component: () => import("@/views/pages/ActivityView.vue"),

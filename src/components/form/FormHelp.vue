@@ -24,7 +24,7 @@
         <button type="button" @click="closeModal" class="px-4 py-2 text-sm text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none w-full md:w-auto">
           Cancel
         </button>
-        <button type="submit" :disabled="isLoading" class="px-4 py-2 text-sm text-white bg-indigo-600 rounded-md hover:bg-indigo-500 focus:outline-none w-full md:w-auto">
+        <button type="submit" :disabled="isLoading" class="px-4 py-2 text-sm text-white bg-main rounded-md focus:outline-none w-full md:w-auto">
           {{ isLoading ? 'Loading...' : 'Kirim' }}
         </button>
       </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="mt-2">
     <div class="flex flex-col">
-      <label class="text-sm capitalize font-[600]">{{ label.replace(/_/g, " ") }}</label>
+      <label class="text-sm capitalize font-[600]">{{ label?.replace(/_/g, " ") }} <RequiredItem v-if="required"/></label>
       <label v-if="subLabel" class="text-sm capitalize font-[400]" v-html="formattedSubLabel"></label>
     </div>
     <div v-if="file.length" class="flex items-center gap-2 mt-2 w-full h-[80px] border border-gray-400 border-dashed rounded-[8px] p-2">
@@ -49,6 +49,7 @@
       @change="onChange"
       class="hidden"
       :accept="acceptedFormats"
+      :required="required"
     />
   </div>
 </template>
@@ -56,8 +57,12 @@
 
 <script>
 import Swal from 'sweetalert2';
+import RequiredItem from "@/components/input/helper-input/RequiredItem.vue";
 
 export default {
+  components: {
+      RequiredItem,
+  },
   props: {
     value: {
       type: Array,
@@ -83,6 +88,10 @@ export default {
       required: false,
       default: 'all', // Can be 'image', 'file', or 'all'
     },
+    required: {
+        type: Boolean,
+        required: false
+      }
   },
   data() {
     return {
