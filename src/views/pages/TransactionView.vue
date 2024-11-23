@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import { GET_TRANSACTION_DETAIL } from "@/store/transaction.module";
+import { GET_TRANSACTION_DETAIL } from "@/store/transactions.module";
 
 export default {
   data() {

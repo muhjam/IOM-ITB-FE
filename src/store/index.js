@@ -1,9 +1,11 @@
 import { createStore } from "vuex";
 import auth from "./auth.module";
-import activity from "./activity.module";
-import merchandise from "./merchandise.module";
-import transaction from "./transaction.module";
-import member from "./member.module";
+import activities from "./activities.module";
+import merchandises from "./merchandises.module";
+import donations from "./donations.module";
+import helpSubmissions from "./helpSubmissions.module";
+import transactions from "./transactions.module";
+import members from "./members.module";
 
 export default createStore({
   state() {
@@ -19,9 +21,11 @@ export default createStore({
   },
   modules: {
     auth,
-    activity,
-    merchandise,
-    transaction,
-    member
+    activities,
+    merchandises,
+    donations,
+    helpSubmissions,
+    transactions,
+    members
   },
 });

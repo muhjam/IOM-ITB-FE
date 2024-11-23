@@ -40,7 +40,7 @@ import InputText from "@/components/input/InputText.vue";
 import InputCheckboxOptions from "@/components/input/InputCheckboxOptions.vue";
 import InputFile from "@/components/input/InputFile.vue";
 import { useStore } from 'vuex';
-import { POST_MEMBER, PUT_MEMBER } from "@/store/member.module";
+import { POST_MEMBER, PUT_MEMBER } from "@/store/members.module";
 
 export default {
   components: {

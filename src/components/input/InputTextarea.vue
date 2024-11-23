@@ -17,7 +17,7 @@ import RequiredItem from "@/components/input/helper-input/RequiredItem.vue";
 
 export default {
   components: {
-        RequiredItem,
+      RequiredItem,
   },
   props: {
     keyValue: {

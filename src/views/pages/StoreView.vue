@@ -74,7 +74,7 @@
 
 <script>
 import HeaderItem from "@/components/header/HeaderItem.vue";
-import { GET_MERCHANDISES } from "@/store/merchandise.module";
+import { GET_MERCHANDISES } from "@/store/merchandises.module";
 
 export default {
   components: {

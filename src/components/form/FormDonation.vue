@@ -7,7 +7,7 @@
     <h1 class="text-[24px] md:text-[42px] font-[700] text-center md:text-left">Donasi</h1>
     <img :src="require('@/assets/icon/icon-close.svg')" class="w-[24px] cursor-pointer" @click.native="closeModal"/>
     </div>
-    <form @submit.prevent="handleSubmit" class="mt-6 overflow-scroll">
+    <form @submit.prevent="handleSubmit" class="mt-6">
       <h1 class="text-[16px] md:text-[30px] font-[700] text-center md:text-left">Data Diri</h1>
       <div class="flex flex-col md:flex-row md:justify-between gap-4">
         <InputText keyValue="name" label="Nama" class="w-full md:w-1/2" :required="true" @update="updateValue" />
@@ -15,6 +15,7 @@
       </div>
       <div class="flex flex-col md:flex-row md:justify-between gap-4 mt-4">
         <InputText keyValue="noWhatsapp" label="No Whatsapp" class="w-full md:w-1/2" :required="true" @update="updateValue" />
+        <div class="hidden md:block md:w-1/2"></div>
       </div>
       <div class="flex flex-col gap-2 mt-4">
         <h1 class="text-[16px] md:text-[30px] font-[700] text-center md:text-left">Pembayaran Donasi</h1>
@@ -43,17 +44,20 @@ Sebagai mitra ITB, IOM ITB  senantiasa berkoordinasi dengan Direktorat kemahasis
         </p>
       </div>
       <div class="flex flex-col md:flex-row md:justify-between gap-4">
-        <div class="w-1/2">
+        <div class="w-full md:w-1/2">
           <h1 class="text-[16px] md:text-[30px] font-[700] text-center md:text-left">Mandiri QRIS</h1>
         <img :src="require('@/assets/image/mandiri-qris.png')"/>
       </div>
-      <div class="w-1/2">
+      <div class="w-full md:w-1/2">
           <h1 class="text-[16px] md:text-[30px] font-[700] text-center md:text-left">BSI QRIS</h1>
         <img :src="require('@/assets/image/bsi-qris-full.png')"/>
       </div>
       </div>
       <div class="flex flex-col gap-4 mt-4">
-        <InputFile keyValue="file" label="Upload Bukti Bayar" subLabel="" format="all" class="w-full" :required="true" @update="updateValue" />
+        <InputFile keyValue="proof" label="Upload Bukti Bayar" subLabel="" format="all" class="w-full" :required="true" @update="updateValue" />
+      </div>
+      <div class="flex flex-col md:flex-row md:justify-between gap-4 mt-4">
+        <InputCheckboxOptions keyValue="notification" label="Menerima notifikasi melalui?" class="w-full md:w-1/2" :required="true" :options="['Whatsapp', 'Email']" @update="updateValue" />
       </div>
       <!-- Submit and Cancel Buttons -->
       <div class="flex flex-col-reverse md:flex-row justify-end gap-4 mt-6">
@@ -78,7 +82,7 @@ import InputSelection from "@/components/input/InputSelection.vue";
 import InputCheckboxOptions from "@/components/input/InputCheckboxOptions.vue";
 import InputFile from "@/components/input/InputFile.vue";
 import { useStore } from 'vuex';
-import { POST_MEMBER, PUT_MEMBER } from "@/store/member.module";
+import { POST_DONATION } from "@/store/donations.module";
 
 export default {
   components: {
@@ -101,9 +105,8 @@ export default {
         parentName: "",
         childNim: "",
         noWhatsapp: "",
-        staff: false,
-        foster: false,
-        file: null,
+        proof: null,
+        notification: {},
       }
     };
   },
@@ -128,16 +131,11 @@ export default {
       this.isLoading = true;
       try {
         const payload = {
-          id: this.id,
           data: { ...this.data },
         };
-
-        if (this.id) {
-          await this.store.dispatch(PUT_MEMBER, payload);
-        } else {
-          await this.store.dispatch(POST_MEMBER, payload);
-        }
+        await this.store.dispatch(POST_DONATION, payload);
         document.body.classList.remove('no-scroll');
+        this.isLoading = false;
         this.closeModal();
       } catch (error) {
         console.error('Failed to submit data:', error);

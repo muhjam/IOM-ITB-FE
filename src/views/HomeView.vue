@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import { GET_ACTIVITIES } from "@/store/activity.module";
+import { GET_ACTIVITIES } from "@/store/activities.module";
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import GraphicItem from "@/components/item/GraphicItem.vue";
 import ActivitiesItem from "@/components/card/ActivitiesItem.vue";

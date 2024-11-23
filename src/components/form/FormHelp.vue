@@ -14,14 +14,14 @@
         <InputSelection keyValue="type" label="Jenis Bantuan" class="w-full md:w-1/2" :required="true" @update="updateValue" :options="['Biaya UKT', 'Biaya Hidup', 'Biaya Tugas Akhir', 'Biaya Kesehatan (Bagi yang membutuhkan dan bersifat darurat)', 'Bantuan Lainnya']" placeholder="Pilih Jenis Bantuan" />
       </div>
       <div class="flex flex-col md:flex-row md:justify-between gap-4 mt-4">
-        <InputTextarea keyValue="staff" label="Alasan kenapa memerlukan bantuan?" class="w-full" :required="true" :options="['Bersedia']" @update="updateValue" />
+        <InputTextarea keyValue="reason" label="Alasan kenapa memerlukan bantuan?" class="w-full" :required="true" :options="['Bersedia']" @update="updateValue" />
       </div>
       <div class="flex flex-col gap-4 mt-4">
         <InputFile keyValue="file" label="Upload Berkas (Proposal Ajuan)" subLabel="" format="all" class="w-full" :required="true" @update="updateValue" />
       </div>
       <!-- Submit and Cancel Buttons -->
       <div class="flex flex-col-reverse md:flex-row justify-end gap-4 mt-6">
-        <button type="button" @click="closeModal" class="px-4 py-2 text-sm text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none w-full md:w-auto">
+        <button type="button" class="px-4 py-2 text-sm text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none w-full md:w-auto">
           Cancel
         </button>
         <button type="submit" :disabled="isLoading" class="px-4 py-2 text-sm text-white bg-main rounded-md focus:outline-none w-full md:w-auto">
@@ -40,7 +40,7 @@ import InputSelection from "@/components/input/InputSelection.vue";
 import InputCheckboxOptions from "@/components/input/InputCheckboxOptions.vue";
 import InputFile from "@/components/input/InputFile.vue";
 import { useStore } from 'vuex';
-import { POST_MEMBER, PUT_MEMBER } from "@/store/member.module";
+import { POST_HELP_SUBMISSION } from "@/store/helpSubmissions.module";
 
 export default {
   components: {
@@ -84,19 +84,16 @@ export default {
     },
     async handleSubmit() {
       this.isLoading = true;
+      console.log('test')
       try {
+        console.log('test2')
         const payload = {
-          id: this.id,
           data: { ...this.data },
         };
+        console.log(payload)
 
-        if (this.id) {
-          await this.store.dispatch(PUT_MEMBER, payload);
-        } else {
-          await this.store.dispatch(POST_MEMBER, payload);
-        }
-
-        this.closeModal();
+        await this.store.dispatch(POST_HELP_SUBMISSION, payload);
+        this.isLoading = false;
       } catch (error) {
         console.error('Failed to submit data:', error);
         alert('Error: ' + error.message);

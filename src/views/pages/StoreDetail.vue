@@ -135,8 +135,8 @@
 </template>
 
 <script>
-import { GET_MERCHANDISE_DETAIL } from "@/store/merchandise.module";
-import { POST_TRANSACTION } from "@/store/transaction.module";
+import { GET_MERCHANDISE_DETAIL } from "@/store/merchandises.module";
+import { POST_TRANSACTION } from "@/store/transactions.module";
 import Swal from 'sweetalert2';
 
 export default {

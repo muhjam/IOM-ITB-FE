@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { GET_ACTIVITIES } from "@/store/activity.module";
+import { GET_ACTIVITIES } from "@/store/activities.module";
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import ActivitiesItem from "@/components/card/ActivitiesItem.vue";
 

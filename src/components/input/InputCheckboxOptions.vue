@@ -1,6 +1,6 @@
 <template>
     <div class="mt-2">
-      <label class="text-sm capitalize font-[600]">{{ label.replace(/_/g, " ") }}</label>
+      <label class="text-sm capitalize font-[600]">{{ label.replace(/_/g, " ") }} <RequiredItem v-if="required"/></label>
       <div v-for="(option, index) in options" :key="index" class="flex items-center space-x-2">
         <input
           type="checkbox"
@@ -15,7 +15,12 @@
   </template>
   
   <script>
+  import RequiredItem from "@/components/input/helper-input/RequiredItem.vue";
+
   export default {
+    components: {
+      RequiredItem,
+    },
     props: {
       keyValue: {
         type: String,
@@ -33,6 +38,10 @@
       options: {
         type: Array,
         required: true
+      },
+      required: {
+        type: Boolean,
+        required: false
       }
     },
     data() {
