@@ -50,6 +50,12 @@ const routes = [
         meta: { haveAuthenticated: true },
       },
       {
+        path: "/daftar",
+        name: "Daftar",
+        component: () => import("@/views/pages/RegisterView.vue"),
+        meta: { haveAuthenticated: true },
+      },
+      {
         path: "/register",
         name: "Registr",
         component: () => import("@/views/pages/RegisterView.vue"),
