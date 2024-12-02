@@ -135,11 +135,23 @@ export default {
         };
         await this.store.dispatch(POST_DONATION, payload);
         document.body.classList.remove('no-scroll');
+        Swal.fire({
+          title: 'Berhasil!',
+          text: 'Data berhasil dikirimkan successfully.',
+          icon: 'success',
+          confirmButtonColor: '#7066e0',
+          confirmButtonText: 'OK'
+        });
         this.isLoading = false;
         this.closeModal();
       } catch (error) {
-        console.error('Failed to submit data:', error);
-        alert('Error: ' + error.message);
+        Swal.fire({
+          title: 'Error!',
+          text: 'Data gagal dikirim.',
+          icon: 'error',
+          confirmButtonColor: '#7066e0',
+          confirmButtonText: 'Coba lagi'
+        });
         this.isLoading = false;
       }
     }

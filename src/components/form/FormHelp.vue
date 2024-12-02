@@ -17,7 +17,7 @@
         <InputTextarea keyValue="reason" label="Alasan kenapa memerlukan bantuan?" class="w-full" :required="true" :options="['Bersedia']" @update="updateValue" />
       </div>
       <div class="flex flex-col gap-4 mt-4">
-        <InputFile keyValue="file" label="Upload Berkas (Proposal Ajuan)" subLabel="" format="all" class="w-full" :required="true" @update="updateValue" />
+        <InputFile keyValue="file" label="Upload Berkas (Proposal Ajuan)" subLabel="" format="file" class="w-full" :required="true" @update="updateValue" />
       </div>
       <!-- Submit and Cancel Buttons -->
       <div class="flex flex-col-reverse md:flex-row justify-end gap-4 mt-6">
@@ -93,10 +93,23 @@ export default {
         console.log(payload)
 
         await this.store.dispatch(POST_HELP_SUBMISSION, payload);
+        Swal.fire({
+          title: 'Berhasil!',
+          text: 'Data berhasil dikirimkan successfully.',
+          icon: 'success',
+          confirmButtonColor: '#7066e0',
+          confirmButtonText: 'OK'
+        });
         this.isLoading = false;
+        this.closeModal();
       } catch (error) {
-        console.error('Failed to submit data:', error);
-        alert('Error: ' + error.message);
+        Swal.fire({
+          title: 'Error!',
+          text: 'Data gagal dikirim.',
+          icon: 'error',
+          confirmButtonColor: '#7066e0',
+          confirmButtonText: 'Coba lagi'
+        });
         this.isLoading = false;
       }
     }

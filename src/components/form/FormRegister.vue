@@ -19,13 +19,10 @@
         <InputCheckboxOptions keyValue="foster" label="Bersedia menjadi Orang Tua Asuh?" class="w-full md:w-1/2" :required="true" :options="['Bersedia']" @update="updateValue" />
       </div>
       <div class="flex flex-col gap-4 mt-4">
-        <InputFile keyValue="file" label="Upload Scan PDF Surat Pernyataan Ketersediaan Menjadi Orang Tua Asuh" subLabel="Download template [disini](https://docs.google.com/document/u/1/export?format=docx&id=1yNNx0t2hfm2mDpaVjMPRH-MOpnKtrIzA9PYnwxmewgM&token=AC4w5VikJY28576IyLc9CmsUssgm4S-ySA%3A1723506902118&includes_info_params=true&usp=docs_home&cros_files=false&inspectorResult=%7B%22pc%22%3A1%2C%22lplc%22%3A31%7D)." format="all" class="w-full" :required="true" @update="updateValue" />
+        <InputFile keyValue="file" label="Upload Scan PDF Surat Pernyataan Ketersediaan Menjadi Orang Tua Asuh" subLabel="Download template [disini](https://docs.google.com/document/u/1/export?format=docx&id=1yNNx0t2hfm2mDpaVjMPRH-MOpnKtrIzA9PYnwxmewgM&token=AC4w5VikJY28576IyLc9CmsUssgm4S-ySA%3A1723506902118&includes_info_params=true&usp=docs_home&cros_files=false&inspectorResult=%7B%22pc%22%3A1%2C%22lplc%22%3A31%7D)." format="file" class="w-full" :required="true" @update="updateValue" />
       </div>
       <!-- Submit and Cancel Buttons -->
       <div class="flex flex-col-reverse md:flex-row justify-end gap-4 mt-6">
-        <button type="button" @click="closeModal" class="px-4 py-2 text-sm text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none w-full md:w-auto">
-          Cancel
-        </button>
         <button type="submit" :disabled="isLoading" class="px-4 py-2 text-sm text-white bg-main rounded-md focus:outline-none w-full md:w-auto">
           {{ isLoading ? 'Loading...' : 'Kirim' }}
         </button>
@@ -41,6 +38,7 @@ import InputCheckboxOptions from "@/components/input/InputCheckboxOptions.vue";
 import InputFile from "@/components/input/InputFile.vue";
 import { useStore } from 'vuex';
 import { POST_MEMBER, PUT_MEMBER } from "@/store/members.module";
+import Swal from 'sweetalert2';
 
 export default {
   components: {
@@ -93,11 +91,23 @@ export default {
         } else {
           await this.store.dispatch(POST_MEMBER, payload);
         }
-
+        Swal.fire({
+          title: 'Berhasil!',
+          text: 'Data berhasil dikirimkan successfully.',
+          icon: 'success',
+          confirmButtonColor: '#7066e0',
+          confirmButtonText: 'OK'
+        });
+        this.isLoading = false;
         this.closeModal();
       } catch (error) {
-        console.error('Failed to submit data:', error);
-        alert('Error: ' + error.message);
+        Swal.fire({
+          title: 'Error!',
+          text: 'Data gagal dikirim.',
+          icon: 'error',
+          confirmButtonColor: '#7066e0',
+          confirmButtonText: 'Coba lagi'
+        });
         this.isLoading = false;
       }
     }
