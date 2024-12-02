@@ -141,6 +141,8 @@ export default {
           icon: 'success',
           confirmButtonColor: '#7066e0',
           confirmButtonText: 'OK'
+        }).then(() => {
+          window.location.reload();
         });
         this.isLoading = false;
         this.closeModal();
