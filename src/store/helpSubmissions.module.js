@@ -35,7 +35,6 @@ const actions = {
         });
     },
     [POST_HELP_SUBMISSION](context, params) {
-        console.log('testt')
         return new Promise((resolve, reject) => {
             ApiService.post("/help-submissions", params.data)
                 .then(({ data }) => {

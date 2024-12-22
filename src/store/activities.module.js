@@ -11,6 +11,13 @@ export const DELETE_ACTIVITY = "deleteActivity";
 const state = {
     activities: [
         {
+            image: require('@/assets/image/HARI IBU IOM ITB.png'),
+            title: "Selamat Hari Ibu untuk seluruh Ibu Hebat di Ikatan Orang Tua Mahasiswa ITB!",
+            date: "2024-12-22 00:00:00",
+            description: "Selamat Hari Ibu untuk seluruh Ibu Hebat di Ikatan Orang Tua Mahasiswa ITB!\n\nKami mengucapkan terima kasih yang tulus atas kehadiran Ibu di keluarga besar IOM-ITB. Ibu adalah pilar kekuatan, cinta, dan inspirasi yang mendukung perjalanan anak-anak kita di ITB.\n\nKasih sayang dan doa Ibu adalah fondasi penting yang menguatkan langkah mereka menuju impian. Kehadiran Ibu dalam IOM-ITB mempererat kebersamaan dan memberi semangat baru bagi kita semua.\n\nSemoga Ibu selalu diberi kesehatan, kebahagiaan, dan keberkahan. Terima kasih telah menjadi bagian penting dari perjalanan ini.\n\n\"Ibu, terima kasih telah menjadi inspirasi dan harapan yang selalu menerangi jalan kita semua.\"",
+            url: "/kegiatan"
+        },
+        {
             image: require('@/assets/image/kegiatan9.png'),
             title: "Ucapan Selamat kepada Seluruh Wisudawan/i IOM-ITB",
             date: "2024-06-05 00:00:00",
