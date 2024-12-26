@@ -93,9 +93,9 @@ export default {
   methods: {
     async getData() {
       try {
-        // await this.$store.dispatch(GET_ACTIVITIES, {
-        //   query: "",
-        // });
+        await this.$store.dispatch(GET_ACTIVITIES, {
+          query: "",
+        });
       } catch (err) {
         console.error(err);
       }

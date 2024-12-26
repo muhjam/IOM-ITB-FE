@@ -7,6 +7,7 @@ export default class ConfigProvider {
       APPLICATIONINSIGHTS_CONNECTION_STRING:
         "$APPLICATIONINSIGHTS_CONNECTION_STRING",
         API_URL: "$API_URL",
+        API_UPLOAD: "$API_UPLOAD",
       DEFAULT_TIMEZONE: "Asia/Jakarta",
     };
   }
