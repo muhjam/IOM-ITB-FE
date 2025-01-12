@@ -20,6 +20,11 @@
     </div>
   </div>
 
+  <div class="bg-white p-[16px] md:p-[24px] w-full">
+    <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Top 10 Donasi Yang Masuk</h2>
+    <TableDonation class="w-full"/>
+  </div>
+
   <div class="bg-white p-[16px] md:p-[24px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Kegiatan</h2>
     <ActivitiesItem />
@@ -68,12 +73,14 @@ import { GET_ACTIVITIES } from "@/store/activities.module";
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import GraphicItem from "@/components/item/GraphicItem.vue";
 import ActivitiesItem from "@/components/card/ActivitiesItem.vue";
+import TableDonation from "@/components/table/TableDonation.vue";
 
 export default {
   components: {
     HeaderItem,
     GraphicItem,
-    ActivitiesItem
+    ActivitiesItem,
+    TableDonation
   },
   computed:{
     activities(){
