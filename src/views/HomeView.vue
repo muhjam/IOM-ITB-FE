@@ -21,7 +21,7 @@
   </div>
 
   <div class="bg-white p-[16px] md:p-[24px] w-full">
-    <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Top 10 Donasi Yang Masuk</h2>
+    <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">10 Donatur Terakhir</h2>
     <TableDonation class="w-full"/>
   </div>
 
