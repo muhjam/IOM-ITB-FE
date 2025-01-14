@@ -84,13 +84,10 @@ export default {
     },
     async handleSubmit() {
       this.isLoading = true;
-      console.log('test')
       try {
-        console.log('test2')
         const payload = {
           data: { ...this.data },
         };
-        console.log(payload)
 
         await this.store.dispatch(POST_HELP_SUBMISSION, payload);
         Swal.fire({

@@ -27,10 +27,6 @@ export default {
             Jumlah: formattedPrice(v.amount),
             Tanggal: formattedDate(v.createdAt)
         }));
-
-        console.log(res)
-        console.log(this.rows)
-        console.log(this.cols)
     }
 };
 </script>
