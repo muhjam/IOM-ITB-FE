@@ -25,7 +25,7 @@ export default {
         this.rows = res?.data?.map(v => ({
             Nama: v.name,
             Jumlah: formattedPrice(v.amount),
-            Tanggal: formattedDate(v.createdAt)
+            Tanggal: formattedDate(v.date)
         }));
     }
 };
