@@ -4,7 +4,7 @@
     <div class="flex-grow">
       <router-view />
     </div>
-    <ButtonItem v-if="!['/pendaftaran-anggota', 'pengajuan-bantuan'].includes($route.path)" />
+    <ButtonItem v-if="!['/pendataan-anggota', 'pengajuan-bantuan'].includes($route.path)" />
     <FooterItem />
   </div>
 </template>

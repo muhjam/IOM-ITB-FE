@@ -23,9 +23,9 @@
         </li>
         <li class="py-2">
           <a
-            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/pendaftaran-anggota' ? 'font-[800]' : 'font-[500]'}`"
-            href="/pendaftaran-anggota"
-          >Pendaftaran Anggota</a>
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/pendataan-anggota' ? 'font-[800]' : 'font-[500]'}`"
+            href="/pendataan-anggota"
+          >Pendataan Anggota</a>
         </li>
         <li class="py-2">
           <a
@@ -63,7 +63,7 @@
           <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/kegiatan' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/kegiatan">Kegiatan</a>
         </li>
         <li class="nav-item">
-          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/pendaftaran-anggota' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/pendaftaran-anggota">Pendaftaran Anggota</a>
+          <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/pendataan-anggota' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/pendataan-anggota">Pendataan Anggota</a>
         </li>
         <li class="nav-item">
           <a :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/pengajuan-bantuan' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/pengajuan-bantuan">Pengajuan Bantuan</a>

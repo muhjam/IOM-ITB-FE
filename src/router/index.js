@@ -44,7 +44,7 @@ const routes = [
         meta: { haveAuthenticated: true },
       },
       {
-        path: "/pendaftaran-anggota",
+        path: "/pendataan-anggota",
         name: "Registerasi",
         component: () => import("@/views/pages/RegisterView.vue"),
         meta: { haveAuthenticated: true },
