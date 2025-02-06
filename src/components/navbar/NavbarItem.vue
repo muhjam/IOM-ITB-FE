@@ -73,7 +73,7 @@
                 href="#"
               >
 
-                Pendaatan <ArrowSvg class="group-hover/item:rotate-180 duration-200" className="w-[16px]" color="#003793"/>
+                Pendataan <ArrowSvg class="group-hover/item:rotate-180 duration-200" className="w-[16px]" color="#003793"/>
               </a>
               
               <ul
