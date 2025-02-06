@@ -107,12 +107,6 @@ export default {
         console.error(err);
       }
     },
-    truncateText(text, maxLength) {
-      if (text && text.length > maxLength) {
-        return text.slice(0, maxLength) + "...";
-      }
-      return text;
-    },
   }
 };
 </script>

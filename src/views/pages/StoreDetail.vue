@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-colorSecond pt-[100px] pb-[32px] px-[18px] md:px-[70px]">
+  <div class="bg-colorSecond pt-[10px] pb-[32px] px-[18px] md:px-[70px]">
     <!-- Merchandise Details -->
     <div class="max-w-3xl mx-auto bg-white border border-gray-200 rounded-lg shadow p-6">
       <div class="flex flex-col md:flex-row">

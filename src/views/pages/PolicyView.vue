@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-colorSecond pt-[100px] pb-[32px] px-[18px] md:px-[70px]">
+  <div class="bg-colorSecond pb-[32px] px-[18px] md:px-[70px]">
   <div class="privacy-policy">
     <h1 class="font-[600] text-[24px] mb-[8px]">Kebijakan Privasi</h1>
     <p>

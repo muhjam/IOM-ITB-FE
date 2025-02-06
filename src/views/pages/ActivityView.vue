@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white pt-[100px] pb-[32px] px-[18px] md:px-[70px]">
+  <div class="bg-white pt-[10px] pb-[32px] px-[18px] md:px-[70px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Kegiatan Terbaru</h2>
     <img :src="activities[0]?.image" alt="IOM-ITB" class="w-full md:w-1/2 object-cover p-4 md:p-20 block md:hidden">
     <div class="flex flex-col md:flex-row justify-between">
@@ -9,7 +9,7 @@
           {{ formatDate(activities[0]?.date) }}
         </p>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line mb-[24px]">
-          {{ truncateText(activities[0]?.description, 850) }}
+          {{ truncate(activities[0]?.description, 850) }}
         </p>
         <a :href="activities[0]?.url" class="inline-flex items-center px-3 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
             Baca Selengkapnya
@@ -29,6 +29,7 @@
 import { GET_ACTIVITIES } from "@/store/activities.module";
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import ActivitiesItem from "@/components/card/ActivitiesItem.vue";
+import { truncate } from "@/utils";
 
 export default {
   components: {
@@ -53,6 +54,7 @@ export default {
     this.getData()
   },
   methods: {
+    truncate,
     async getData() {
       try {
         await this.$store.dispatch(GET_ACTIVITIES, {
@@ -67,12 +69,6 @@ export default {
       let binary = '';
       byteArray.forEach((byte) => binary += String.fromCharCode(byte));
       return `data:image/jpeg;base64,${btoa(binary)}`;
-    },
-    truncateText(text, maxLength) {
-      if (text && text.length > maxLength) {
-        return text.slice(0, maxLength) + "...";
-      }
-      return text;
     },
     formatDate(dateString) {
       if (!dateString) return "";

@@ -29,5 +29,7 @@ export const formattedPrice = (value) => {
   
     return `${day} ${month} ${year}`;
   };
-  
-  
+
+  export const truncate = (name, length= 50) => {
+    return name?.length > 50 ? `${name.substring(0, length)}...` : name;
+  };

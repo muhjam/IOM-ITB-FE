@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-colorSecond pt-[100px] pb-[32px] px-[18px] md:px-[70px]">
+  <div class="bg-colorSecond pb-[32px] px-[18px] md:px-[70px]">
     <form @submit.prevent="submitSearch" class="max-w-md mx-auto mb-[8px]">
       <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
       <div class="relative">

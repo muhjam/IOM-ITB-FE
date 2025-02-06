@@ -6,10 +6,10 @@
         </a>
         <div class="p-5">
           <a :href="v?.url">
-            <h5 class="text-xl md:text-2xl font-bold tracking-tight text-white">{{ truncateText(v.title, 20) }}</h5>
+            <h5 class="text-xl md:text-2xl font-bold tracking-tight text-white">{{ truncate(v.title, 20) }}</h5>
           </a>
-          <span class="text-[14px] font-[600] text-white">{{ formatDate(v?.date) }}</span>
-          <p class="mb-3 text-[14px] mt-2 text-white">{{ truncateText(v?.description, 200) }}</p>
+          <span class="text-[14px] font-[600] text-white">{{ formattedDate(v?.date) }}</span>
+          <p class="mb-3 text-[14px] mt-2 text-white">{{ truncate(v?.description, 200) }}</p>
         </div>
         <a :href="v?.url" class="inline-flex items-center px-3 py-2 mt-auto w-fit mx-[12px] mb-[24px] text-sm font-medium text-center text-main bg-white rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
             Baca Selengkapnya
@@ -23,6 +23,7 @@
   
   <script>
   import HeaderItem from "@/components/header/HeaderItem.vue";
+import { truncate, formattedDate } from "@/utils";
   
   export default {
     components: {
@@ -44,27 +45,14 @@
     },
 
     methods: {
+      truncate,
+      formattedDate,
       getImageBase64 (buffer) {
       const byteArray = new Uint8Array(buffer);
       let binary = '';
       byteArray.forEach((byte) => binary += String.fromCharCode(byte));
       return `data:image/jpeg;base64,${btoa(binary)}`;
     },
-      truncateText(text, maxLength) {
-        if (text && text.length > maxLength) {
-          return text.slice(0, maxLength) + "...";
-        }
-        return text;
-      },
-      formatDate(dateString) {
-        if (!dateString) return "";
-        const date = new Date(dateString);
-        return date.toLocaleDateString("id-ID", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        });
-      },
     }
   };
   </script>

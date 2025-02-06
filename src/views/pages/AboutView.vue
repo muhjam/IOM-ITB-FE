@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white pt-[100px] pb-[32px] px-[18px] md:px-[70px]">
+  <div class="bg-white pt-[10px] pb-[32px] px-[18px] md:px-[70px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Latar Belakang</h2>
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="w-full text-justify">

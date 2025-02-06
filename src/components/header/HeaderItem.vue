@@ -1,5 +1,5 @@
 <template>
-	<Carousel class="mt-[80px]">
+	<Carousel>
 	  <Slide v-for="slide in 4" :key="slide">
 		<div v-if="slide === 1" class="relative h-[30vh] sm:h-[90vh] w-full bg-cover bg-no-repeat">
 		  <video class="absolute inset-0 w-full h-full object-cover" autoplay muted playsinline>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-colorSecond pt-[100px] pb-[32px] px-[18px] md:px-[70px]">
+  <div class="bg-colorSecond pt-[10px] pb-[32px] px-[18px] md:px-[70px]">
     <div class="flex flex-col md:flex-row justify-between items-center">
       <div class="w-full md:w-1/2">
         <p class="font-[500] text-[16px] md:text-[18px] text-main whitespace-pre-line">

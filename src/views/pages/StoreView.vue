@@ -1,17 +1,20 @@
 <template>
-  <div class="bg-colorSecond pt-[100px] pb-[32px] px-[18px] md:px-[70px] flex justify-center">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <div class="bg-colorSecond pt-[10px] pb-[32px] px-[4px] sm:px-[18px] md:px-[70px]">
+    <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Merchandise</h2>
+  <div class="flex justify-center">
+    <Loading :active="isLoading" class="mt-20" />
+    <div v-if="!isLoading" class="grid grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-2 lg:gap-4">
       <div
         v-for="(merchandise, idx) in merchandises?.data"
         :key="merchandise.id"
         class="max-w-sm bg-white border border-gray-200 rounded-lg shadow"
       >
-        <div class="w-full h-[300px] overflow-hidden">
+        <div class="w-full h-[200px] overflow-hidden">
           <img
             v-if="merchandise.image"
             :src="merchandise.image"
             :alt="merchandise.name"
-            class="rounded-t-lg object-cover"
+            class="rounded-t-lg h-48 w-96 object-cover"
           />
           <img
             v-else
@@ -22,25 +25,25 @@
         </div>
         <div class="p-5 bg-white">
           <a href="#">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+            <h5 class="mb-2 text-sm md:text-2xl font-bold tracking-tight text-gray-900">
               {{ merchandise.name }}
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-            {{ merchandise.description }}
+          <p class="mb-3 text-sm  font-normal text-gray-700 dark:text-gray-400">
+            {{ truncate(merchandise.description) }}
           </p>
-          <p class="mb-3 font-bold text-main">
+          <p class="mb-3 font-bold text-main text-sm md:text-lg">
             {{ formatPrice(merchandise.price) }}
           </p>
-          <p class="mb-3 font-normal text-gray-500 dark:text-gray-400">
+          <p class="mb-3 font-normal text-gray-500 dark:text-gray-400 text-sm md:text-sm">
             Stok: {{ merchandise.stock }}
           </p>
           <div v-if="merchandise.stock > 0">
             <a
-              :href="`store/${merchandise.id}`"
+              :href="`https://www.itbpress.id/`"
               class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
             >
-              Beli Sekarang
+              Itb Press
               <svg
                 class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                 aria-hidden="true"
@@ -70,19 +73,24 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 <script>
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import { GET_MERCHANDISES } from "@/store/merchandises.module";
+import { truncate } from "@/utils/index"
+import Loading from "vue-loading-overlay";
 
 export default {
   components: {
     HeaderItem,
+    Loading
   },
   data() {
     return {
       data: [],
+      isLoading: true,
     };
   },
   computed: {
@@ -90,10 +98,12 @@ export default {
       return this.$store.getters.merchandises;
     },
   },
-  mounted() {
-    this.getData();
+  async mounted() {
+   await this.getData();
+    this.isLoading = false;
   },
   methods: {
+    truncate,
     async getData() {
       try {
         await this.$store.dispatch(GET_MERCHANDISES, {

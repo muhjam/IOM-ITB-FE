@@ -20,7 +20,7 @@ const routes = [
         meta: { haveAuthenticated: false },
       },
       {
-        path: "/merchendise",
+        path: "/merchandise",
         name: "Store",
         component: () => import("@/views/pages/StoreView.vue"),
         meta: { haveAuthenticated: false },
