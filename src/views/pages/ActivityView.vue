@@ -1,4 +1,6 @@
 <template>
+  <Loading :active="isLoading" />
+  <div v-if="!isLoading">
   <div class="bg-white pt-[10px] pb-[32px] px-[18px] md:px-[70px]">
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Kegiatan Terbaru</h2>
     <img :src="activities[0]?.image" alt="IOM-ITB" class="w-full md:w-1/2 object-cover p-4 md:p-20 block md:hidden">
@@ -23,6 +25,7 @@
     <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px]">Kegiatan Lainnya</h2>
     <ActivitiesItem />
   </div>
+</div>
 </template>
 
 <script>
@@ -30,18 +33,21 @@ import { GET_ACTIVITIES } from "@/store/activities.module";
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import ActivitiesItem from "@/components/card/ActivitiesItem.vue";
 import { truncate } from "@/utils";
+import Loading from "@/components/loading/LoadingItem.vue"
 
 export default {
   components: {
     HeaderItem,
     ActivitiesItem,
+    Loading,
   },
   setup() {
     return {};
   },
   data() {
     return {
-      activity: []
+      activity: [],
+      isLoading: true,
     };
   },
   computed:{
@@ -50,8 +56,9 @@ export default {
       return this.$store.getters.activities;
     },
   },
-  mounted(){
-    this.getData()
+  async mounted(){
+   await this.getData();
+    this.isLoading = false;
   },
   methods: {
     truncate,
