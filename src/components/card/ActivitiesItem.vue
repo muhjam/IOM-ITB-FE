@@ -39,11 +39,9 @@ import { truncate, formattedDate } from "@/utils";
     },
     computed:{
       activities(){
-        // Create a new reversed array without mutating the original
         return this.$store.getters.activities;
       },
     },
-
     methods: {
       truncate,
       formattedDate,

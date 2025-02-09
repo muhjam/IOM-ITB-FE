@@ -52,8 +52,7 @@ export default {
   },
   computed:{
     activities(){
-      // Create a new reversed array without mutating the original
-      return this.$store.getters.activities;
+      return this.$store.getters.activities?.data;
     },
   },
   async mounted(){
@@ -65,7 +64,9 @@ export default {
     async getData() {
       try {
         await this.$store.dispatch(GET_ACTIVITIES, {
-          query: "",
+          search: "",
+          limit: 1000,
+          page: 1,
         });
       } catch (err) {
         console.error(err);

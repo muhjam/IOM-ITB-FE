@@ -9,7 +9,7 @@ export const DELETE_ACTIVITY = "deleteActivity";
 
 // Define the initial state
 const state = {
-    activities: [],
+    activities: {},
 };
 
 // Define getters
