@@ -52,7 +52,7 @@ export default {
   },
   computed:{
     activities(){
-      return this.$store.getters.activities?.data;
+      return this.$store.getters.activities;
     },
   },
   async mounted(){
