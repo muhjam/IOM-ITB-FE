@@ -2,22 +2,27 @@
   <Loading :active="isLoading" />
   <div v-if="!isLoading">
   <div class="bg-white pt-[10px] pb-[32px] px-[18px] md:px-[70px]">
-    <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">Kegiatan Terbaru</h2>
-    <img :src="activities[0]?.image" alt="IOM-ITB" class="w-full md:w-1/2 object-cover p-4 md:p-20 block md:hidden">
+    <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center md:text-start">{{thisPathHaveSlug ? "Detail Kegiatan" : "Kegiatan Terbaru"}}</h2>
+    <img :src="activity?.image" alt="IOM-ITB" class="w-full md:w-1/2 object-cover p-4 md:p-20 block md:hidden">
     <div class="flex flex-col md:flex-row justify-between">
       <div class="w-full text-justify">
-        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700] mb-[4px]">{{ activities[0]?.title }}</h4>
+        <h4 class="text-[24px] md:text-[26px] capitalize text-main font-[700] mb-[4px]">{{ activity?.title }}</h4>
         <p class="font-[500] text-[14px] md:text-[16px] text-main opacity-60 whitespace-pre-line mb-[24px]">
-          {{ formatDate(activities[0]?.date) }}
+          {{ formatDate(activity?.date) }}
         </p>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line mb-[24px]">
-          {{ truncate(activities[0]?.description, 850) }}
+          {{ truncate(activity?.description, 850) }}
         </p>
-        <a :href="activities[0]?.url" class="inline-flex items-center px-3 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
+        <a :href="thisPathHaveSlug ? '/kegiatan' : getUrl(activity?.url)" class="inline-flex items-center px-4 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
+          <span v-if="thisPathHaveSlug" class="flex items-center gap-1">
+            <img :src="require('@/assets/icon/arrow-left.svg')" class="w-[18px]"/> Kembali
+          </span> 
+          <span v-else>
             Baca Selengkapnya
+          </span> 
           </a>
       </div>
-      <img :src="activities[0]?.image" alt="IOM-ITB" class="w-full md:w-1/2 md:h-1/2 px-4 md:px-20 hidden md:block">
+      <img :src="activity?.image" alt="IOM-ITB" class="w-full md:w-1/2 md:h-1/2 px-4 md:px-20 hidden md:block">
     </div>
   </div>
 
@@ -29,10 +34,10 @@
 </template>
 
 <script>
-import { GET_ACTIVITIES } from "@/store/activities.module";
+import { GET_DETAIL_ACTIVITY, GET_ACTIVITIES } from "@/store/activities.module";
 import HeaderItem from "@/components/header/HeaderItem.vue";
 import ActivitiesItem from "@/components/card/ActivitiesItem.vue";
-import { truncate } from "@/utils";
+import { getUrl, truncate } from "@/utils";
 import Loading from "@/components/loading/LoadingItem.vue"
 
 export default {
@@ -54,6 +59,12 @@ export default {
     activities(){
       return this.$store.getters.activities;
     },
+    activity(){
+      return this.$route.path.split("/").filter(Boolean).length > 1 ? this.$store.getters.detailActivity : this.$store.getters.activities?.[0];
+    },
+    thisPathHaveSlug() {
+      return this.$route.path.split("/").filter(Boolean).length > 1;
+    }
   },
   async mounted(){
    await this.getData();
@@ -61,8 +72,14 @@ export default {
   },
   methods: {
     truncate,
+    getUrl,
     async getData() {
       try {
+        if(this.$route.params.slug){
+          await this.$store.dispatch(GET_DETAIL_ACTIVITY, {
+            slug: this.$route.params.slug
+          });
+        }
         await this.$store.dispatch(GET_ACTIVITIES, {
           search: "",
           limit: 1000,

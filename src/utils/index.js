@@ -33,3 +33,7 @@ export const formattedPrice = (value) => {
   export const truncate = (name, length= 50) => {
     return name?.length > 50 ? `${name.substring(0, length)}...` : name;
   };
+
+  export const getUrl = (url) =>{
+    return url?.includes('/') ? url : '/kegiatan/' + url;
+  };
