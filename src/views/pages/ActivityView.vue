@@ -11,7 +11,7 @@
           {{ formatDate(activity?.date) }}
         </p>
         <p class="font-[500] text-[14px] md:text-[16px] text-main whitespace-pre-line mb-[24px]">
-          {{ truncate(activity?.description, 850) }}
+          {{ thisPathHaveSlug ? activity?.description : truncate(activity?.description, 850) }}
         </p>
         <a :href="thisPathHaveSlug ? '/kegiatan' : getUrl(activity?.url)" class="inline-flex items-center px-4 py-2 text-[18px] font-medium text-center text-white bg-main rounded-full hover:opacity-[0.8] focus:ring-4 focus:outline-none focus:ring-blue-300">
           <span v-if="thisPathHaveSlug" class="flex items-center gap-1">
