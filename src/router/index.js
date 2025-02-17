@@ -109,6 +109,12 @@ const routes = [
         component: () => import("@/views/pages/SubmissionView.vue"),
         meta: { haveAuthenticated: true },
       },
+      {
+        path: "/orangtua-asuh",
+        name: "Form Orang Tua Asuh",
+        component: () => import("@/views/pages/FormOrangtuaAsuh.vue"),
+        meta: { haveAuthenticated: true },
+      },
     ],
   },
   {

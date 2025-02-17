@@ -33,6 +33,12 @@
             href="/pengajuan-bantuan"
           >Pengajuan Bantuan</a>
         </li>
+        <li class="py-2">
+          <a
+            :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/orangtua-asuh' ? 'font-[800]' : 'font-[500]'}`"
+            href="/orangtua-asuh"
+          >Menjadi Orang Tua Asuh</a>
+        </li>
         <li class="nav-item">
               <a :class="`text-main cursor-pointer block px-4 py-2 hover:opacity-[0.8] ${$route.path === '/merchandise' ? 'font-[800]' : 'font-[500]'}`" aria-current="page" href="/merchandise">Merchandise</a>
             </li>
@@ -77,7 +83,7 @@
               </a>
               
               <ul
-                class="absolute left-0 hidden group-hover:block bg-white shadow-lg py-2 w-48 z-10 rounded group/item"
+                class="absolute left-0 hidden group-hover:block bg-white shadow-lg py-2 w-64 z-10 rounded group/item"
               >
                 <li class="nav-item py-2">
                   <a
@@ -95,6 +101,15 @@
                     href="/pengajuan-bantuan"
                   >
                     Pengajuan Bantuan
+                  </a>
+                </li>
+                <li class="nav-item py-2">
+                  <a
+                    :class="`text-main hover:opacity-80 px-3 py-2 ${$route.path === '/orangtua-asuh' ? 'font-[800]' : 'font-[500]'}`"
+                    aria-current="page"
+                    href="/orangtua-asuh"
+                  >
+                  Menjadi Orang Tua Asuh
                   </a>
                 </li>
               </ul>
