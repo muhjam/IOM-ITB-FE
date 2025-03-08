@@ -24,7 +24,7 @@
         </div>
         <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 mb-4">
           <h5 class="font-semibold mb-2">KONTAK</h5>
-          <p>organiomitb@gmail.com</p>
+          <p>sekretariat.iom.itb@gmail.com</p>
           <p>+62 856-2465-4990</p>
           <div class="flex space-x-4 mt-2">
             <a target="_blank" href="https://www.instagram.com/iom_itb" class="w-[18px] h-[18px]"><img :src="require('@/assets/icon/instagram.svg')"/></a>
