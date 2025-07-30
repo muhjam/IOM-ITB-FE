@@ -26,6 +26,7 @@
     return {
       data: [
         {category: 'year', graphic: [
+          require('@/assets/image/grafik-penerimaan-bantuan-iom-2025.png'),
           require('@/assets/image/grafik-rekap-pertahun.png'),
           require('@/assets/image/grafik-biaya-hidup-pertahun.png'),
           require('@/assets/image/grafik-tugas-akhir-pertahun.png'),
