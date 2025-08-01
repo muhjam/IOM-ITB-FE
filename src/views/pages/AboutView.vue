@@ -23,7 +23,7 @@
   <div class="border w-[90%] mx-auto opacity-50"></div>
 
   <div class="bg-white p-[16px] md:p-[24px]">
-    <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Ruang Lingkup Kegiatan IOM-ITB</h2>
+    <h2 class="text-main font-[800] text-[16px] md:text-[24px] lg:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">Ruang Lingkup Kegiatan IOM-ITB</h2>
     <div class="flex w-full flex-wrap">
      <img :src="require('@/assets/image/lingkup1.png')" class="md:w-1/2" />
      <img :src="require('@/assets/image/lingkup2.png')" class="md:w-1/2" />
@@ -31,7 +31,7 @@
   </div>
 
   <div class="bg-white p-[16px]">
-    <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Pembinaan Mahasiswa dan Konseling</h2>
+    <h2 class="text-main font-[800] text-[16px] md:text-[24px] lg:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">Pembinaan Mahasiswa dan Konseling</h2>
     <div class="flex w-full flex-wrap">
      <img :src="require('@/assets/image/pembinaan1.png')" class="md:w-1/4" />
      <img :src="require('@/assets/image/pembinaan2.png')" class="md:w-1/4" />
@@ -43,14 +43,14 @@
   <div class="border w-[90%] mx-auto opacity-50"></div>
 
   <div class="bg-white p-[16px]">
-    <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Keanggotaan IOM</h2>
+    <h2 class="text-main font-[800] text-[16px] md:text-[24px] lg:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">Keanggotaan IOM</h2>
     <div class="flex w-full flex-wrap">
      <img :src="require('@/assets/image/keanggotaan.png')" />
     </div>
   </div>
 
   <div class="bg-white p-[16px]">
-    <h2 class="text-main font-[800] text-[32px] md:text-[50px] text-center leading-tight md:leading-[65.1px] py-[16px]">Perangkat Organisasi</h2>
+    <h2 class="text-main font-[800] text-[16px] md:text-[24px] lg:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">Perangkat Organisasi</h2>
     <div class="flex w-full flex-wrap">
       <img :src="require('@/assets/image/perangkat1.png')" class="md:w-1/4" />
      <img :src="require('@/assets/image/perangkat2.png')" class="md:w-1/4" />
@@ -61,11 +61,10 @@
 
   <div class="border w-[90%] mx-auto opacity-50"></div>
 
-  <div class="bg-white px-[18px] md:px-[70px]">
-    <!-- <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">Struktur Kepengurusan IOM-ITB Pusat
-Periode 2024 - 2027</h2> -->
+  <div class="bg-white py-[16px] px-[8px] sm:px-[18px] md:px-[70px]">
+    <h2 class="text-main font-[800] text-[16px] md:text-[24px] lg:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">PENGURUS PUSAT HARISAN IKATAN ORANGTUA MAHASISWA - INSTITUT TEKNOLOGI BANDUNG PERIODE 2023 - 2027</h2>
     <div class="flex justify-center items-center">
-      <img :src="require('@/assets/image/struktur-organisasi.png')" alt="Struktur Organisasi" class="w-full object-cover  md:p-20">
+      <img :src="require('@/assets/image/struktur-organisasi.png')" alt="Struktur Organisasi" class="w-full object-cover p-0 lg:p-20">
     </div>
   </div>
 
