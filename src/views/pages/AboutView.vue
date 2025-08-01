@@ -61,11 +61,11 @@
 
   <div class="border w-[90%] mx-auto opacity-50"></div>
 
-  <div class="bg-white p-[16px] px-[18px] md:px-[70px]">
-    <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">Struktur Kepengurusan IOM-ITB Pusat
-Periode 2024 - 2027</h2>
+  <div class="bg-white px-[18px] md:px-[70px]">
+    <!-- <h2 class="text-main font-[800] text-[32px] md:text-[50px] leading-tight md:leading-[65.1px] py-[16px] text-center">Struktur Kepengurusan IOM-ITB Pusat
+Periode 2024 - 2027</h2> -->
     <div class="flex justify-center items-center">
-      <img :src="require('@/assets/image/struktur-organisasi.png')" alt="Struktur Organisasi" class="w-full object-cover p-4 md:p-20">
+      <img :src="require('@/assets/image/struktur-organisasi.png')" alt="Struktur Organisasi" class="w-full object-cover  md:p-20">
     </div>
   </div>
 
